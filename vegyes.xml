@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<invoices>
+	<customer customerID="A">
+		<customerName>A</customerName>
+		<customerAddress>A</customerAddress>
+		<customerCity>A</customerCity>
+		<customerPostCode>A</customerPostCode>
+		<customerCountry>A</customerCountry>
+		<customerEmail>A</customerEmail>
+		<customerPhone>A</customerPhone>
+		<customerLoyalty>Arany</customerLoyalty>
+		<customerDiscount>30</customerDiscount>
+	</customer>
+	<customer customerID="B">
+		<customerName>B</customerName>
+		<customerAddress>B</customerAddress>
+		<customerCity>B</customerCity>
+		<customerPostCode>B</customerPostCode>
+		<customerCountry>B</customerCountry>
+		<customerEmail>B</customerEmail>
+		<customerPhone>B</customerPhone>
+		<customerLoyalty>Ezüst</customerLoyalty>
+		<customerDiscount>20</customerDiscount>
+	</customer>
+	<customer customerID="C">
+		<customerName>C</customerName>
+		<customerAddress>C</customerAddress>
+		<customerCity>C</customerCity>
+		<customerPostCode>C</customerPostCode>
+		<customerCountry>C</customerCountry>
+		<customerEmail>C</customerEmail>
+		<customerPhone>C</customerPhone>
+		<customerLoyalty>Bronz</customerLoyalty>
+		<customerDiscount>10</customerDiscount>
+	</customer>
+</invoices>
+

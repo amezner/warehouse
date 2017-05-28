@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane prefHeight="650.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hu.unideb.inf.warehouse.view.CustomerViewController">
+   <right>
+      <FlowPane alignment="TOP_CENTER" columnHalignment="CENTER" prefWidth="150.0" vgap="20.0">
+         <children>
+            <Button mnemonicParsing="false" onAction="#addNewCustomerAction" prefWidth="120.0" text="Új Ügyfél" />
+            <Button mnemonicParsing="false" onAction="#editCustomerAction" prefWidth="120.0" text="Szerkesztés" />
+            <Button mnemonicParsing="false" onAction="#deleteCustomerAction" prefWidth="120.0" text="Törlés" />
+         </children>
+         <BorderPane.margin>
+            <Insets />
+         </BorderPane.margin>
+         <padding>
+            <Insets top="20.0" />
+         </padding></FlowPane>
+   </right>
+   <top>
+      <Label text="Ügyfél Karbantartás" textFill="#21197c" BorderPane.alignment="CENTER">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+   </top>
+   <center>
+      <FlowPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <TableView fx:id="customerTable" prefHeight="621.0" prefWidth="850.0">
+              <columns>
+                <TableColumn fx:id="customerIDColumn" maxWidth="-Infinity" minWidth="75.0" prefWidth="75.0" text="ID" />
+                  <TableColumn fx:id="customerNameColumn" maxWidth="-Infinity" minWidth="200.0" prefWidth="200.0" text="Nev" />
+                  <TableColumn fx:id="customerCountryColumn" maxWidth="-Infinity" minWidth="150.0" prefWidth="150.0" text="Ország" />
+                  <TableColumn fx:id="customerPostCodeColumn" maxWidth="-Infinity" minWidth="85.0" prefWidth="85.0" text="Irányítószám" />
+                  <TableColumn fx:id="customerCityColumn" maxWidth="-Infinity" minWidth="100.0" prefWidth="100.0" text="Varos" />
+                  <TableColumn fx:id="customerAddressColumn" maxWidth="-Infinity" minWidth="150.0" prefWidth="150.0" text="Cim" />
+                  <TableColumn fx:id="customerLoyaltyColumn" maxWidth="-Infinity" minWidth="50.0" prefWidth="50.0" text="Kartya" />
+                  <TableColumn fx:id="customerDiscountColumn" maxWidth="-Infinity" minWidth="30.0" prefWidth="30.0" style="-fx-alignment: CENTER-RIGHT;" text="\%" />
+              </columns>
+            </TableView>
+         </children>
+      </FlowPane>
+   </center>
+</BorderPane>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<customers>
+	<customer customerID="CUS001">
+		<customerName>Kiss Bt.</customerName>
+		<customerAddress>Kossuth Lajos u. 5.</customerAddress>
+		<customerCity>Gyöngyös</customerCity>
+		<customerPostCode>3200</customerPostCode>
+		<customerCountry>Magyarország</customerCountry>
+		<customerEmail>info@kiss.hu</customerEmail>
+		<customerPhone>+36 37 555 000</customerPhone>
+		<customerLoyalty>Arany</customerLoyalty>
+		<customerDiscount>30</customerDiscount>
+	</customer>
+	<customer customerID="CUS002">
+		<customerName>B</customerName>
+		<customerAddress>B</customerAddress>
+		<customerCity>B</customerCity>
+		<customerPostCode>B</customerPostCode>
+		<customerCountry>B</customerCountry>
+		<customerEmail>B</customerEmail>
+		<customerPhone>B</customerPhone>
+		<customerLoyalty>Ezüst</customerLoyalty>
+		<customerDiscount>20</customerDiscount>
+	</customer>
+	<customer customerID="CUS003">
+		<customerName>C</customerName>
+		<customerAddress>C</customerAddress>
+		<customerCity>C</customerCity>
+		<customerPostCode>C</customerPostCode>
+		<customerCountry>C</customerCountry>
+		<customerEmail>C</customerEmail>
+		<customerPhone>C</customerPhone>
+		<customerLoyalty>Bronz</customerLoyalty>
+		<customerDiscount>10</customerDiscount>
+	</customer>
+</customers>

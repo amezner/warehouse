@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane prefHeight="650.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hu.unideb.inf.warehouse.view.InvoicingViewController">
+   <top>
+      <Label text="Számlázás" textFill="#21197c" BorderPane.alignment="CENTER">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+   </top>
+   <center>
+      <SplitPane dividerPositions="0.5" orientation="VERTICAL" BorderPane.alignment="CENTER">
+        <items>
+            <BorderPane prefHeight="200.0" prefWidth="200.0">
+               <center>
+                  <TableView fx:id="productTable" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="280.0" prefWidth="850.0" BorderPane.alignment="TOP_LEFT">
+                    <columns>
+                      <TableColumn fx:id="productIDColumn" minWidth="75.0" prefWidth="75.0" text="ID" />
+                      <TableColumn fx:id="productNameColumn" minWidth="240.0" prefWidth="240.0" text="Megnevezés" />
+                        <TableColumn fx:id="productTypeColumn" minWidth="150.0" prefWidth="150.0" text="Típus" />
+                        <TableColumn fx:id="productPurchasePriceColumn" minWidth="140.0" prefWidth="140.0" style="-fx-alignment: CENTER-RIGHT;" text="Beszerzési Ár" />
+                        <TableColumn fx:id="productSellingPriceColumn" minWidth="140.0" prefWidth="140.0" style="-fx-alignment: CENTER-RIGHT;" text="Eladási Ár" />
+                        <TableColumn fx:id="productOnStockColumn" minWidth="100.0" prefWidth="100.0" style="-fx-alignment: CENTER-RIGHT;" text="Raktáron (db)" />
+                    </columns>
+                  </TableView>
+               </center>
+               <top>
+                  <Label alignment="CENTER" prefHeight="25.0" prefWidth="1000.0" style="-fx-background-color: yellow;" text="Készlet" BorderPane.alignment="CENTER">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+               </top>
+               <right>
+                  <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#addToInvoice" prefHeight="40.0" prefWidth="150.0" text="Kosárba" BorderPane.alignment="CENTER" />
+               </right>
+            </BorderPane>
+            <BorderPane layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0">
+               <center>
+                  <TableView fx:id="cartTable" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="280.0" prefWidth="1000.0" BorderPane.alignment="TOP_LEFT">
+                    <columns>
+                      <TableColumn fx:id="cartIDColumn" minWidth="75.0" prefWidth="75.0" text="ID" />
+                      <TableColumn fx:id="cartNameColumn" minWidth="240.0" prefWidth="240.0" text="Megnevezés" />
+                        <TableColumn fx:id="cartTypeColumn" minWidth="150.0" prefWidth="150.0" text="Típus" />
+                        <TableColumn fx:id="cartSoldPriceColumn" minWidth="140.0" prefWidth="140.0" style="-fx-alignment: CENTER-RIGHT;" text="Eladási Ár" />
+                        <TableColumn fx:id="cartQuantityColumn" minWidth="100.0" prefWidth="120.0" style="-fx-alignment: CENTER-RIGHT;" text="Mennyiség (db)" />
+                        <TableColumn fx:id="cartSubTotalColumn" minWidth="140.0" prefWidth="140.0" style="-fx-alignment: CENTER-RIGHT;" text="Összesen" />
+                    </columns>
+                  </TableView>
+               </center>               <bottom>
+                  <Button mnemonicParsing="false" onAction="#finalizeInvoice" text="Számla lezárása" BorderPane.alignment="CENTER" />
+               </bottom>
+               <top>
+                  <Label alignment="CENTER" prefHeight="25.0" prefWidth="1000.0" style="-fx-background-color: green;" text="Kosár" textFill="#b8e408" BorderPane.alignment="CENTER">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+               </top>
+            </BorderPane>
+        </items>
+      </SplitPane>
+   </center>
+</BorderPane>
