@@ -18,6 +18,8 @@ import hu.unideb.inf.warehouse.model.Product;
 import hu.unideb.inf.warehouse.service.FormValidation;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.layout.BorderPane;
 import javafx.stage.FileChooser;
 
 /**
@@ -32,32 +34,37 @@ public class MainMenuController {
     
 	private Main main;
 
-    public void setMain(Main main) {
+	/**
+	 * JavaFX inicializációhoz szükséges metódus, nélküle nem működne a megjelenítés.
+	 * 
+	 * @param main FXML inicializáláshoz szükséges
+	 */
+	public void setMain(Main main) {
         this.main = main;
     }
     
 	@FXML
-	private void goCustomerView() throws IOException {
-		main.showCustomerView();
+	void goCustomerView() throws IOException {
+		showCustomerView();
 	}
 	
 	@FXML
-	private void goProductView() throws IOException {
-		main.showProductView();
+	void goProductView() throws IOException {
+		showProductView();
 	}
 	
 	@FXML
-	private void goInvoicingView() throws IOException {
-		main.showInvoicingView();
+	void goInvoicingView() throws IOException {
+		showInvoicingView();
 	}
 
 	@FXML
-	private void goInvoicesView() throws IOException {
-		main.showInvoicesView();
+	void goInvoicesView() throws IOException {
+		showInvoicesView();
 	}
 	
 	@FXML
-	private void goSaveEverything() throws IOException, ParserConfigurationException, TransformerException {
+	void goSaveEverything() throws IOException, ParserConfigurationException, TransformerException {
 		Finalizer dao = new Finalizer();
 		dao.finalizeProducts(main.getProducts());
 		dao.finalizeCustomers(main.getCustomers());
@@ -65,7 +72,7 @@ public class MainMenuController {
 	}
 	
 	@FXML
-	private void goLoadProductXML() throws IOException, ParserConfigurationException, TransformerException, SAXException {
+	void goLoadProductXML() throws IOException, ParserConfigurationException, TransformerException, SAXException {
 		FileChooser fileChooser = new FileChooser();
 		FileChooser.ExtensionFilter extFilter = new FileChooser.ExtensionFilter("XML files (*.xml)", "*.xml");
 		fileChooser.getExtensionFilters().add(extFilter);
@@ -100,7 +107,7 @@ public class MainMenuController {
 	}
 	
 	@FXML
-	private void goLoadCustomerXML() throws IOException, ParserConfigurationException, TransformerException, SAXException {
+	void goLoadCustomerXML() throws IOException, ParserConfigurationException, TransformerException, SAXException {
 		FileChooser fileChooser = new FileChooser();
 		FileChooser.ExtensionFilter extFilter = new FileChooser.ExtensionFilter("XML files (*.xml)", "*.xml");
 		fileChooser.getExtensionFilters().add(extFilter);
@@ -135,4 +142,45 @@ public class MainMenuController {
 		} else
 			logger.info("Nem választott file-t!");
 	}
+	
+	
+	void showInvoicingView() throws IOException {
+	    logger.info("Számlázás nézet betöltése.");
+	    
+		FXMLLoader loader = new FXMLLoader();
+	    loader.setLocation(Main.class.getResource("/view/InvoicingView.fxml"));
+	    BorderPane invoicingView = loader.load();
+	    ((InvoicingViewController)loader.getController()).setMain(main);
+	    main.mainView.setCenter(invoicingView);
+	}
+	
+	void showCustomerView() throws IOException {
+        logger.info("Ügyfél Karbantartás nézet betöltése.");
+
+		FXMLLoader loader = new FXMLLoader();
+        loader.setLocation(Main.class.getResource("/view/CustomerView.fxml"));
+        BorderPane customerView = loader.load();
+        ((CustomerViewController)loader.getController()).setMain(main);
+        main.mainView.setCenter(customerView);
+    }
+	
+	void showProductView() throws IOException {
+        logger.info("Raktar Karbantartás nézet betöltése.");
+        
+        FXMLLoader loader = new FXMLLoader();
+        loader.setLocation(Main.class.getResource("/view/ProductView.fxml"));
+        BorderPane productView = loader.load();
+        ((ProductViewController)loader.getController()).setMain(main);
+        main.mainView.setCenter(productView);
+    }
+	
+	void showInvoicesView() throws IOException {
+        logger.info("Számla megtekintés nézet betöltése.");
+        
+		FXMLLoader loader = new FXMLLoader();
+        loader.setLocation(Main.class.getResource("/view/InvoicesView.fxml"));
+        BorderPane invoicesView = loader.load();
+        ((InvoicesViewController)loader.getController()).setMain(main);
+        main.mainView.setCenter(invoicesView);
+    }
 }

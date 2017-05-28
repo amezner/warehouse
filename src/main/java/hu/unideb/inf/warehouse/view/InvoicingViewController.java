@@ -13,12 +13,17 @@ import hu.unideb.inf.warehouse.model.Invoice;
 import hu.unideb.inf.warehouse.model.Product;
 import hu.unideb.inf.warehouse.model.SoldProduct;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
-import javafx.scene.control.TextField;
 import javafx.scene.control.TextInputDialog;
 import javafx.scene.control.Alert.AlertType;
+import javafx.scene.layout.BorderPane;
+import javafx.stage.Modality;
+import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 import javafx.scene.control.Label;
 
 /**
@@ -33,6 +38,11 @@ public class InvoicingViewController {
 
 	private Main main;
 
+	/**
+	 * JavaFX inicializációhoz szükséges metódus, nélküle nem működne a megjelenítés.
+	 * 
+	 * @param main FXML inicializáláshoz szükséges
+	 */
 	public void setMain(Main main) {
 
 		this.main = main;
@@ -82,9 +92,6 @@ public class InvoicingViewController {
 
 	@FXML
 	private TableColumn<SoldProduct, Double> cartSubTotalColumn;
-
-	@FXML
-	private TextField quantityField;
 	
 	@FXML
 	private Label customerNameLabel;
@@ -93,7 +100,7 @@ public class InvoicingViewController {
 	private Label customerDiscountLabel;
 
 	@FXML
-	private void initialize() {
+	void initialize() {
 
 //		logger.info("ez meg lefut");
 //		System.out.println(main.isCartCustomerSelected());
@@ -123,12 +130,35 @@ public class InvoicingViewController {
 
 	}
 
+	
+	void showChooseCustomer() throws IOException {
+        
+		logger.info("Ügyfélválasztó betöltése számlázáshoz.");
+        
+		FXMLLoader loader = new FXMLLoader();
+        loader.setLocation(Main.class.getResource("/view/ChooseCustomer.fxml"));
+        
+        BorderPane chooseCustomer = loader.load();
+        Stage dialog = new Stage();
+        dialog.setTitle("Ügyfél kiválasztás számlázáshoz");
+        dialog.initModality(Modality.WINDOW_MODAL);
+        dialog.initOwner(main.primaryStage);
+        Scene scene = new Scene(chooseCustomer);
+        dialog.setScene(scene);
+        dialog.initStyle(StageStyle.UNDECORATED);
+       
+        ((ChooseCustomerController)loader.getController()).setMain(main);
+ 
+        dialog.showAndWait();
+        
+    }
+	
 	@FXML
-	private void pickCustomer() throws IOException {
+	void pickCustomer() throws IOException {
 	
 		if (!main.isCartCustomerSelected()) {
 	        
-			main.showChooseCustomer();
+			showChooseCustomer();
 			
 			customerNameLabel.setText(main.getCartCustomer().getCustomerName());
 			customerDiscountLabel.setText(main.getCartCustomer().getCustomerDiscount().toString());
@@ -146,7 +176,7 @@ public class InvoicingViewController {
 	}
 	
 	@FXML
-	private void addToInvoice() throws IOException {
+	void addToInvoice() throws IOException {
 	
 		if (main.isCartCustomerSelected()) {
 		
@@ -215,7 +245,7 @@ public class InvoicingViewController {
 	}
 
 	@FXML
-	private void finalizeInvoice() {
+	void finalizeInvoice() {
 		
 		logger.info("Adható kedvezmény mértéke :" + DiscountService.volumeDiscount(main.getCart()));
 		

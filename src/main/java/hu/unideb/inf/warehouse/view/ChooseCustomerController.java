@@ -2,7 +2,6 @@ package hu.unideb.inf.warehouse.view;
 
 import hu.unideb.inf.warehouse.Main;
 import hu.unideb.inf.warehouse.model.Customer;
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
@@ -23,6 +22,12 @@ public class ChooseCustomerController {
 
 	private Main main;
 
+
+	/**
+	 * JavaFX inicializációhoz szükséges metódus, nélküle nem működne a megjelenítés.
+	 * 
+	 * @param main FXML inicializáláshoz szükséges
+	 */
 	public void setMain(Main main) {
 		this.main = main;
 		customerTable.setItems(main.getCustomers());
@@ -59,7 +64,7 @@ public class ChooseCustomerController {
 	private Button chooseButton;
 
 	@FXML
-	private void initialize() {
+	void initialize() {
 
 		customerCountryLabel.setText("");
 		customerPostCodeLabel.setText("");
@@ -76,7 +81,7 @@ public class ChooseCustomerController {
         			 .addListener((o, oldValue, newValue) -> showCustomerDetails(newValue));
 	}
 	
-    private void showCustomerDetails(Customer customer) {
+    void showCustomerDetails(Customer customer) {
         if (customer != null) {
         	customerCountryLabel.setText(customer.getCustomerCountry());
         	customerPostCodeLabel.setText(customer.getCustomerPostCode());
@@ -88,7 +93,7 @@ public class ChooseCustomerController {
     }
     
 	@FXML
-	private void handleButtonAction(ActionEvent event) {
+	void handleButtonAction() {
 		if (customerTable.getSelectionModel().getSelectedIndex() >= 0) {
 			main.setCartCustomer(customerTable.getItems().get(customerTable.getSelectionModel().getSelectedIndex()));
 			main.setCartCustomerSelected(true);

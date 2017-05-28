@@ -4,25 +4,18 @@ import java.io.IOException;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import hu.unideb.inf.warehouse.Main;
 import hu.unideb.inf.warehouse.model.Customer;
 import hu.unideb.inf.warehouse.model.Invoice;
 import hu.unideb.inf.warehouse.model.Product;
 import hu.unideb.inf.warehouse.model.SoldProduct;
-import hu.unideb.inf.warehouse.view.CustomerViewController;
-import hu.unideb.inf.warehouse.view.ChooseCustomerController;
-import hu.unideb.inf.warehouse.view.InvoicesViewController;
-import hu.unideb.inf.warehouse.view.InvoicingViewController;
 import hu.unideb.inf.warehouse.view.MainMenuController;
 import hu.unideb.inf.warehouse.view.MainViewController;
-import hu.unideb.inf.warehouse.view.ProductViewController;
 import javafx.application.Application;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.layout.BorderPane;
-import javafx.stage.Modality;
 import javafx.stage.Stage;
 
 /**
@@ -47,10 +40,17 @@ public class Main extends Application {
     private Customer cartCustomer = null;
     private ObservableList<Invoice> invoices = FXCollections.observableArrayList();
     
+    /**
+     *  JavaFX ablakkezeléshez szüksége színpad. 
+     */
     public Stage primaryStage;
-    private BorderPane mainView;
     
-	public Main() {
+    /**
+     *  JavaFX főképernyő megjelenítéséhez szüksége színpad. 
+     */
+    public BorderPane mainView;
+    
+//	public Main() {
 //		customers.add(new Customer("CUS0001", "Kiss Bt.", "Kossuth Lajos u. 5.", "Gyöngyös", "3200", "Magyarország", "info@kiss.hu", "+36 37 555 000", "Arany", 30));
 //		customers.add(new Customer("CUS002", "B", "B", "B", "B", "B", "B", "B", "Ezüst", 20));
 //		customers.add(new Customer("CUS003", "C", "C", "C", "C", "C", "C", "C", "Bronz", 10));
@@ -81,10 +81,25 @@ public class Main extends Application {
 //		invoices.add(new Invoice("INV0004",customers.get(0),cart));
 //
 //		System.out.println(invoices.get(1).toString());
-
-	}
+//	}
     
-	@Override
+
+    
+	/**
+	 * Az alkalmazásunk belépési pontja.
+	 * @param args az alkalmazás indítási paraméterei, nem használjuk semmire
+	 */
+	public static void main(String[] args) {
+		launch(args);
+	}
+	
+	
+	/**
+     * JavaFX fő belépési pontja.
+     *
+     * @param primaryStage kijelöli az elsődleges színpadot a JavaFX indításához
+     */
+    @Override
 	public void start(Stage primaryStage) throws Exception {
         this.primaryStage = primaryStage;
         primaryStage.setTitle("WareHouse Management V1.0");
@@ -113,67 +128,7 @@ public class Main extends Application {
         ((MainMenuController)loader.getController()).setMain(this);
         mainView.setCenter(mainMenu);
 	}
-	
-	public void showCustomerView() throws IOException {
-        logger.info("Ügyfél Karbantartás nézet betöltése.");
 
-		FXMLLoader loader = new FXMLLoader();
-        loader.setLocation(Main.class.getResource("/view/CustomerView.fxml"));
-        BorderPane customerView = loader.load();
-        ((CustomerViewController)loader.getController()).setMain(this);
-        mainView.setCenter(customerView);
-    }
-	
-	public void showProductView() throws IOException {
-        logger.info("Raktar Karbantartás nézet betöltése.");
-        
-        FXMLLoader loader = new FXMLLoader();
-        loader.setLocation(Main.class.getResource("/view/ProductView.fxml"));
-        BorderPane productView = loader.load();
-        ((ProductViewController)loader.getController()).setMain(this);
-        mainView.setCenter(productView);
-    }
-		
-	public void showInvoicingView() throws IOException {
-        logger.info("Számlázás nézet betöltése.");
-        
-		FXMLLoader loader = new FXMLLoader();
-        loader.setLocation(Main.class.getResource("/view/InvoicingView.fxml"));
-        BorderPane invoicingView = loader.load();
-        ((InvoicingViewController)loader.getController()).setMain(this);
-        mainView.setCenter(invoicingView);
-    }
-	
-	public void showInvoicesView() throws IOException {
-        logger.info("Számla megtekintés nézet betöltése.");
-        
-		FXMLLoader loader = new FXMLLoader();
-        loader.setLocation(Main.class.getResource("/view/InvoicesView.fxml"));
-        BorderPane invoicesView = loader.load();
-        ((InvoicesViewController)loader.getController()).setMain(this);
-        mainView.setCenter(invoicesView);
-    }
-	
-	public void showChooseCustomer() throws IOException {
-        
-		logger.info("Ügyfélválasztó betöltése számlázáshoz.");
-        
-		FXMLLoader loader = new FXMLLoader();
-        loader.setLocation(Main.class.getResource("/view/ChooseCustomer.fxml"));
-        
-        BorderPane chooseCustomer = loader.load();
-        Stage dialog = new Stage();
-        dialog.setTitle("Ügyfél kiválasztás számlázáshoz");
-        dialog.initModality(Modality.WINDOW_MODAL);
-        dialog.initOwner(primaryStage);
-        Scene scene = new Scene(chooseCustomer);
-        dialog.setScene(scene);
-       
-        ((ChooseCustomerController)loader.getController()).setMain(this);
- 
-        dialog.showAndWait();
-        
-    }
 
 	public ObservableList<Customer> getCustomers() {
 		return customers;
@@ -193,10 +148,6 @@ public class Main extends Application {
 	
 	public ObservableList<Invoice> getInvoices() {
 		return invoices;
-	}
-	
-	public static void main(String[] args) {
-		launch(args);
 	}
 
 	public boolean isCartCustomerSelected() {

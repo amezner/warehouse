@@ -4,7 +4,6 @@ import hu.unideb.inf.warehouse.model.Customer;
 import hu.unideb.inf.warehouse.service.FormValidation;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.ChoiceBox;
@@ -59,13 +58,13 @@ public class EditCustomerController {
 	private Button saveButton;
 	
 	@FXML
-	private void handleCancelButtonAction(ActionEvent event) {
+	void handleCancelButtonAction() {
 		Stage stage = (Stage) cancelButton.getScene().getWindow();
 	    stage.close();
 	}
 	
 	@FXML
-	private void initialize(){
+	void initialize(){
 		customerLoyaltyBox.setValue("Alap");
 		customerLoyaltyBox.setItems(loyaltyCardTypeList);
 	}

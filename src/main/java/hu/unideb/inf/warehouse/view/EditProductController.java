@@ -2,7 +2,6 @@ package hu.unideb.inf.warehouse.view;
 
 import hu.unideb.inf.warehouse.model.Product;
 import hu.unideb.inf.warehouse.service.FormValidation;
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextArea;
@@ -47,7 +46,7 @@ public class EditProductController {
 	private Button saveButton;
 	
 	@FXML
-	private void handleCancelButtonAction(ActionEvent event) {
+	void handleCancelButtonAction() {
 	    Stage stage = (Stage) cancelButton.getScene().getWindow();
 	    stage.close();
 	}

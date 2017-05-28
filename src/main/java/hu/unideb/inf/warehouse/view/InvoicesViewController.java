@@ -22,6 +22,12 @@ public class InvoicesViewController {
 
 	private static Logger logger = LoggerFactory.getLogger(InvoicesViewController.class);
 
+	
+	/**
+	 * JavaFX inicializációhoz szükséges metódus, nélküle nem működne a megjelenítés.
+	 * 
+	 * @param main FXML inicializáláshoz szükséges
+	 */
 	public void setMain(Main main) {
 		invoiceTable.setItems(main.getInvoices());
 	}
@@ -39,7 +45,7 @@ public class InvoicesViewController {
 	private TableColumn<Invoice, String> invoiceDateColumn;
 
 	@FXML
-	private void initialize() {
+	void initialize() {
 
 		invoiceNumberColumn.setCellValueFactory(c -> c.getValue().getInvoiceNumberProperty());
 		customerNameColumn.setCellValueFactory(c -> c.getValue().getCustomer().getCustomerNameProperty());
@@ -48,7 +54,7 @@ public class InvoicesViewController {
 	}
 
 	@FXML
-	private void viewInvoice() throws IOException {
+	void viewInvoice() throws IOException {
 		
 		if (invoiceTable.getSelectionModel().getSelectedIndex() >= 0) {
 		  Invoice invoice = invoiceTable.getItems().get(invoiceTable.getSelectionModel().getSelectedIndex());

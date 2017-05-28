@@ -63,7 +63,7 @@ public class ProductViewController {
     private Label productDescriptionLabel;
 	
 	@FXML
-	private void initialize(){
+	void initialize(){
 		productIDLabel.setText("");
 		productNameLabel.setText("");
 		productDescriptionLabel.setText("");
@@ -80,13 +80,18 @@ public class ProductViewController {
     				 .addListener((o, oldValue, newValue) -> showProductDetails(newValue));
 	}
 
-    public void setMain(Main main) {
+	/**
+	 * JavaFX inicializációhoz szükséges metódus, nélküle nem működne a megjelenítés.
+	 * 
+	 * @param main FXML inicializáláshoz szükséges
+	 */
+	public void setMain(Main main) {
         this.main = main;
         productTable.setItems(main.getProducts());
     }
     
 	@FXML
-	private void addNewProductAction() throws IOException {
+	void addNewProductAction() throws IOException {
 
 		Product product = new Product("", "", "", 0, 0, 0, "");
 		
@@ -118,7 +123,7 @@ public class ProductViewController {
 	}
 	
 	@FXML
-	private void editProductAction() throws IOException {
+	void editProductAction() throws IOException {
 	
         logger.info("Termek szerkesztes nezet betoltese.");
         
@@ -138,13 +143,13 @@ public class ProductViewController {
 	}
 	
 	@FXML
-	private void deleteProductAction() throws IOException {
+	void deleteProductAction() throws IOException {
 		
 		productTable.getItems().remove(productTable.getSelectionModel().getSelectedIndex());
 	
 	}
 	
-    private void showProductDetails(Product product) {
+    void showProductDetails(Product product) {
     	if (product != null) {
     		productIDLabel.setText(product.getProductID());
     		productNameLabel.setText(product.getProductName());

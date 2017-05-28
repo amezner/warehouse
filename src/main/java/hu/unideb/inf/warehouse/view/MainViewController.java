@@ -15,12 +15,17 @@ public class MainViewController {
 	
 	private Main main;
 
-    public void setMain(Main main) {
+	/**
+	 * JavaFX inicializációhoz szükséges metódus, nélküle nem működne a megjelenítés.
+	 * 
+	 * @param main FXML inicializáláshoz szükséges
+	 */
+	public void setMain(Main main) {
         this.main = main;
     }
     
 	@FXML
-	private void goHome() throws IOException {
+	void goHome() throws IOException {
 		main.showMainMenu();
 	}
 }

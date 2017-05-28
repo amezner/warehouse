@@ -61,7 +61,7 @@ public class CustomerViewController {
 	private TableColumn<Customer, Integer> customerDiscountColumn;
 
     @FXML
-    private void initialize() {
+    void initialize() {
     	
     	customerIDColumn.setCellValueFactory(c -> c.getValue().getCustomerIDProperty());
     	customerNameColumn.setCellValueFactory(c -> c.getValue().getCustomerNameProperty());
@@ -74,7 +74,12 @@ public class CustomerViewController {
     
     }	
 
-    public void setMain(Main main) {
+	/**
+	 * JavaFX inicializációhoz szükséges metódus, nélküle nem működne a megjelenítés.
+	 * 
+	 * @param main FXML inicializáláshoz szükséges
+	 */
+   public void setMain(Main main) {
     
     	this.main = main;
         customerTable.setItems(main.getCustomers());
@@ -82,7 +87,7 @@ public class CustomerViewController {
     }
 
 	@FXML
-	private void addNewCustomerAction() throws IOException {
+	void addNewCustomerAction() throws IOException {
 		
 		Customer customer = new Customer("", "", "", "", "", "", "", "", "", 0);
 
@@ -117,7 +122,7 @@ public class CustomerViewController {
 	}
 
 	@FXML
-	private void editCustomerAction() throws IOException {
+	void editCustomerAction() throws IOException {
         
 		logger.info("Meglévő ügyfél szerkesztése nézet betöltése.");
         
@@ -138,7 +143,7 @@ public class CustomerViewController {
 	}
 	
 	@FXML
-	private void deleteCustomerAction() throws IOException {
+	void deleteCustomerAction() throws IOException {
 		
 		customerTable.getItems().remove(customerTable.getSelectionModel().getSelectedIndex());
 	
