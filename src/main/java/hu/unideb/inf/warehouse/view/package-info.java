@@ -1,5 +1,5 @@
 /**
- * Az alkalmazás által használt nézeteket tartalmazza ez a csomag.
+ * Az alkalmazás által használt nézeteket és a hozzájuk tartozó kontrol osztályokat tartalmazza ez a csomag.
  * 
  * @author amezner
  *

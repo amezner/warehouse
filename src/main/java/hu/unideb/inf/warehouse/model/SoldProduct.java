@@ -28,7 +28,6 @@ public class SoldProduct {
 	/**
 	 * Üres konstruktor.
 	 */
-
     public SoldProduct() {
     	
     }

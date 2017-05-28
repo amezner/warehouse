@@ -1,7 +1,7 @@
 /**
- * Az alkalmalzás adatkezelő csomagja.
+ * Az alkalmalzás üzleti logikáját megvalósító.
  * 
- * @author akos
+ * @author amezner
  *
  */
 package hu.unideb.inf.warehouse.service;

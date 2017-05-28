@@ -10,6 +10,7 @@ import hu.unideb.inf.warehouse.model.Invoice;
 import hu.unideb.inf.warehouse.model.Product;
 import hu.unideb.inf.warehouse.model.SoldProduct;
 import hu.unideb.inf.warehouse.view.CustomerViewController;
+import hu.unideb.inf.warehouse.view.ChooseCustomerController;
 import hu.unideb.inf.warehouse.view.InvoicesViewController;
 import hu.unideb.inf.warehouse.view.InvoicingViewController;
 import hu.unideb.inf.warehouse.view.MainMenuController;
@@ -21,6 +22,7 @@ import javafx.collections.ObservableList;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.layout.BorderPane;
+import javafx.stage.Modality;
 import javafx.stage.Stage;
 
 /**
@@ -41,6 +43,8 @@ public class Main extends Application {
 	private ObservableList<Customer> customers = FXCollections.observableArrayList();
     private ObservableList<Product> products = FXCollections.observableArrayList();
     private ObservableList<SoldProduct> cart = FXCollections.observableArrayList();
+    private boolean cartCustomerSelected = false;
+    private Customer cartCustomer = null;
     private ObservableList<Invoice> invoices = FXCollections.observableArrayList();
     
     public Stage primaryStage;
@@ -149,6 +153,27 @@ public class Main extends Application {
         ((InvoicesViewController)loader.getController()).setMain(this);
         mainView.setCenter(invoicesView);
     }
+	
+	public void showChooseCustomer() throws IOException {
+        
+		logger.info("Ügyfélválasztó betöltése számlázáshoz.");
+        
+		FXMLLoader loader = new FXMLLoader();
+        loader.setLocation(Main.class.getResource("/view/ChooseCustomer.fxml"));
+        
+        BorderPane chooseCustomer = loader.load();
+        Stage dialog = new Stage();
+        dialog.setTitle("Ügyfél kiválasztás számlázáshoz");
+        dialog.initModality(Modality.WINDOW_MODAL);
+        dialog.initOwner(primaryStage);
+        Scene scene = new Scene(chooseCustomer);
+        dialog.setScene(scene);
+       
+        ((ChooseCustomerController)loader.getController()).setMain(this);
+ 
+        dialog.showAndWait();
+        
+    }
 
 	public ObservableList<Customer> getCustomers() {
 		return customers;
@@ -172,6 +197,22 @@ public class Main extends Application {
 	
 	public static void main(String[] args) {
 		launch(args);
+	}
+
+	public boolean isCartCustomerSelected() {
+		return cartCustomerSelected;
+	}
+
+	public void setCartCustomerSelected(boolean cartCustomerSelected) {
+		this.cartCustomerSelected = cartCustomerSelected;
+	}
+
+	public Customer getCartCustomer() {
+		return cartCustomer;
+	}
+
+	public void setCartCustomer(Customer cartCustomer) {
+		this.cartCustomer = cartCustomer;
 	}
 
 }

@@ -25,13 +25,14 @@ import javafx.collections.ObservableList;
  * Az adatok XML-ből történő beolvasását megvalósító osztály.
  * 
  * @author amezner
+ * 
  */
 public class Loader {
 
     private static Logger logger = LoggerFactory.getLogger(Loader.class);
     
     /**
-     * Az termékek XML-ből történő beolvasását megvalósító metódus.
+     * A termékek XML-ből történő beolvasását megvalósító metódus.
      * 
      * @param fileName a beolvasandó file neve
      * @return egy listában adja vissza a betöltött elemeket
@@ -40,7 +41,8 @@ public class Loader {
      * @throws ParserConfigurationException kivételt nem kezeli osztályon belül
      */
     public static ObservableList<Product> loadProducts(String fileName) throws SAXException, IOException, ParserConfigurationException {
-		ObservableList<Product> products = FXCollections.observableArrayList();
+		
+    	ObservableList<Product> products = FXCollections.observableArrayList();
 
 		InputStream xmlFile = new FileInputStream(fileName);
 		logger.info("XML file eleresi utja :" + fileName);
@@ -83,8 +85,16 @@ public class Loader {
 		return products;
 	}
     
+    /**
+     * Az ügyfelek XML-ből történő beolvasását megvalósító metódus.
+     * 
+     * @param fileName betöltendő file neve
+     * @return egy listában adja vissza a betöltött elemeket
+     * @throws SAXException kivételt nem kezeli osztályon belül
+     * @throws IOException kivételt nem kezeli osztályon belül
+     * @throws ParserConfigurationException kivételt nem kezeli osztályon belül
+     */
     public static ObservableList<Customer> loadCustomers(String fileName) throws SAXException, IOException, ParserConfigurationException {
-
     	
     	ObservableList<Customer> customers = FXCollections.observableArrayList();
 

@@ -1,8 +1,7 @@
 /**
+ * Az alkalmazás I/O műveleteit kezelő csomag.
  * 
- */
-/**
- * @author akos
+ * @author amezner
  *
  */
 package hu.unideb.inf.warehouse.dao;

@@ -12,8 +12,21 @@ import javafx.scene.text.Font;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
+
+/**
+ * Számlakép generáló osztály.
+ * Jelenleg csak két metódust tartalmaz, terveben van a fejlesztése.
+ * 
+ * @author amezner
+ *
+ */
 public class InvoiceOutput {
 
+	/**
+	 * Számla generáló metódus. Ez a változat egy ablakban jeleníti meg a számlát.
+	 * 
+	 * @param invoice a feldolgozandó számla.
+	 */
 	public static void showInvoiceInWindow(Invoice invoice) {
 		DecimalFormatSymbols symbols = new DecimalFormatSymbols();
 		symbols.setGroupingSeparator(' ');
@@ -69,7 +82,6 @@ public class InvoiceOutput {
         root.getChildren().addAll(sp);
 		nt.setScene(szamla);
         nt.showAndWait();
-		
-		
+	
 	}
 }

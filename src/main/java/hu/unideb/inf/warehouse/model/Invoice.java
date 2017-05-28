@@ -140,7 +140,7 @@ public class Invoice {
 	 * Invoice osztály konstruktora.
 	 * 
 	 * @param invoiceNumber az egyedi számlaszám
-	 * @param incoiceDate számla dátuma
+	 * @param invoiceDate számla dátuma
 	 * @param invoiceDiscount alkalmazott számla kedvezmény
 	 * @param customer a vevő adatait tartalmazza ami {@link Customer} osztály típusú.
 	 * @param soldProducts a megvásárolt termákeket tartalmazó lista.
@@ -154,54 +154,54 @@ public class Invoice {
 		this.soldProducts.addAll(soldProducts);
 	}
 	
-//	/* (non-Javadoc)
-//	 * @see java.lang.Object#toString()
-//	 */
-//	@Override
-//	public String toString() {
-//		DecimalFormatSymbols symbols = new DecimalFormatSymbols();
-//		symbols.setGroupingSeparator(' ');
-//		symbols.setDecimalSeparator('.');
-//		DecimalFormat decimalformat = new DecimalFormat("###,##0.00 Ft",symbols);
-//		StringBuilder sb = new StringBuilder();
-//		sb.append("\n=========================================================================================================\n");
-//		sb.append("                                     WareHouse Management Számla\n");
-//		sb.append("=========================================================================================================\n");
-//		sb.append(String.format("%-35s%-10s%n", "Számlaszám :", invoiceNumber.getValue()));
-//		sb.append(String.format("%-35s%-10s%n", "Számla kiállításának dátuma :", invoiceDate.getValue()));
-//		sb.append("=========================================================================================================\n");
-//		sb.append("Vevő adatai : " + "\n");
-//		sb.append(customer.getCustomerName() + "\n");
-//		sb.append(customer.getCustomerFullAddress() + "\n");
-//		sb.append(customer.getCustomerEmail() + "\n");
-//		sb.append(customer.getCustomerPhone() + "\n");
-//		sb.append("=========================================================================================================\n");
-//		sb.append("Tagsági kártya típusa : " + customer.getCustomerLoyalty() + "\n");
-//		sb.append("Alkalmazott kedvezmény mértéke : " + customer.getCustomerDiscount() + "\n");
-//		sb.append("=========================================================================================================\n");
-//		sb.append("\n");
-//		sb.append(String.format("%-10s%-30s%-15s%15s%15s%20s%n", "ID" , "Megnevezés" , "Típus" , "Eladási Ár" , "Mennyiség" , "Részösszeg"));
-//		for (SoldProduct soldProduct : soldProducts) {
-//			sb.append(String.format("%-10s%-30s%-15s%15s%15s%20s%n",
-//									soldProduct.getProductID(),
-//									soldProduct.getProductName(),
-//									soldProduct.getProductType(),
-//									soldProduct.getProductSoldPrice(),
-//									soldProduct.getProductSoldQuantity(),
-//									decimalformat.format(soldProduct.getProductSubTotal())));
-//			
-//		}
-//		sb.append("\n");
-//		sb.append("=========================================================================================================\n");
-//		sb.append(String.format("%-65s%40s%n", "Számla végösszege kedvemények levonása előtt :" , decimalformat.format(getInvoiceTotal())));
-//		sb.append("---------------------------------------------------------------------------------------------------------\n");
-//		sb.append(String.format("%-25s%-2s%-3s%75s%n", "Kedvezmény mértéke : ", invoiceDiscount.getValue(), '%', decimalformat.format(getInvoiceTotal()/100*(invoiceDiscount.getValue()))));
-//		double total = getInvoiceTotal()/100*(100-invoiceDiscount.getValue());
-//		sb.append("Számla végösszege : " + String.format("%85s%n", decimalformat.format(total)));
-//		sb.append("=========================================================================================================\n");
-//		return sb.toString();
-//		
-//	}
+	/* (non-Javadoc)
+	 * @see java.lang.Object#toString()
+	 */
+	@Override
+	public String toString() {
+		DecimalFormatSymbols symbols = new DecimalFormatSymbols();
+		symbols.setGroupingSeparator(' ');
+		symbols.setDecimalSeparator('.');
+		DecimalFormat decimalformat = new DecimalFormat("###,##0.00 Ft",symbols);
+		StringBuilder sb = new StringBuilder();
+		sb.append("\n=========================================================================================================\n");
+		sb.append("                                     WareHouse Management Számla\n");
+		sb.append("=========================================================================================================\n");
+		sb.append(String.format("%-35s%-10s%n", "Számlaszám :", invoiceNumber.getValue()));
+		sb.append(String.format("%-35s%-10s%n", "Számla kiállításának dátuma :", invoiceDate.getValue()));
+		sb.append("=========================================================================================================\n");
+		sb.append("Vevő adatai : " + "\n");
+		sb.append(customer.getCustomerName() + "\n");
+		sb.append(customer.getCustomerFullAddress() + "\n");
+		sb.append(customer.getCustomerEmail() + "\n");
+		sb.append(customer.getCustomerPhone() + "\n");
+		sb.append("=========================================================================================================\n");
+		sb.append("Tagsági kártya típusa : " + customer.getCustomerLoyalty() + "\n");
+		sb.append("Alkalmazott kedvezmény mértéke : " + customer.getCustomerDiscount() + "\n");
+		sb.append("=========================================================================================================\n");
+		sb.append("\n");
+		sb.append(String.format("%-10s%-30s%-15s%15s%15s%20s%n", "ID" , "Megnevezés" , "Típus" , "Eladási Ár" , "Mennyiség" , "Részösszeg"));
+		for (SoldProduct soldProduct : soldProducts) {
+			sb.append(String.format("%-10s%-30s%-15s%15s%15s%20s%n",
+									soldProduct.getProductID(),
+									soldProduct.getProductName(),
+									soldProduct.getProductType(),
+									soldProduct.getProductSoldPrice(),
+									soldProduct.getProductSoldQuantity(),
+									decimalformat.format(soldProduct.getProductSubTotal())));
+			
+		}
+		sb.append("\n");
+		sb.append("=========================================================================================================\n");
+		sb.append(String.format("%-65s%40s%n", "Számla végösszege kedvemények levonása előtt :" , decimalformat.format(getInvoiceTotal())));
+		sb.append("---------------------------------------------------------------------------------------------------------\n");
+		sb.append(String.format("%-25s%-2s%-3s%75s%n", "Kedvezmény mértéke : ", invoiceDiscount.getValue(), '%', decimalformat.format(getInvoiceTotal()/100*(invoiceDiscount.getValue()))));
+		double total = getInvoiceTotal()/100*(100-invoiceDiscount.getValue());
+		sb.append("Számla végösszege : " + String.format("%85s%n", decimalformat.format(total)));
+		sb.append("=========================================================================================================\n");
+		return sb.toString();
+		
+	}
 	
 	/**
 	 * Visszadja a számla végösszegét.

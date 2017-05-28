@@ -24,6 +24,9 @@ import hu.unideb.inf.warehouse.model.SoldProduct;
 
 /**
  * Az adatok XML-be történő kiírását megvalósító osztály.
+ * 
+ * @author amezner
+ * 
  */
 public class Finalizer {
 
