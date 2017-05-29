@@ -73,7 +73,7 @@ public class FormValidation {
 	 * @return igaz amennyiben a paraméterben megkapott adat megfelel a validációs feltételeknek, egyébként hamis.
 	 */
 	public static boolean validateCustomerPostCode(String postCode, boolean showAlert) {
-		Pattern pattern = Pattern.compile("[1-9]([0-9]+)");
+		Pattern pattern = Pattern.compile("[1-9]([0-9]*)"); 
 		Matcher matcher = pattern.matcher(postCode);
 		if (matcher.find() && matcher.group().equals(postCode))
 			return true;
@@ -325,7 +325,7 @@ public class FormValidation {
 	 * @return igaz amennyiben a paraméterben megkapott adat megfelel a validációs feltételeknek, egyébként hamis.
 	 */
 	public static boolean validateProductPurchasePrice(String productPurchasePrice, boolean showAlert) {
-		Pattern pattern = Pattern.compile("[1-9]([0-9]+)");
+		Pattern pattern = Pattern.compile("[1-9]([0-9]*)"); 
 		Matcher matcher = pattern.matcher(productPurchasePrice);
 		if (matcher.find() && matcher.group().equals(productPurchasePrice))
 			return true;
@@ -350,7 +350,7 @@ public class FormValidation {
 	 * @return igaz amennyiben a paraméterben megkapott adat megfelel a validációs feltételeknek, egyébként hamis.
 	 */
 	public static boolean validateProductSellingPrice(String productSellingPrice, boolean showAlert) {
-		Pattern pattern = Pattern.compile("[1-9]([0-9]+)");
+		Pattern pattern = Pattern.compile("[1-9]([0-9]*)");
 		Matcher matcher = pattern.matcher(productSellingPrice);
 		if (matcher.find() && matcher.group().equals(productSellingPrice))
 			return true;
@@ -368,14 +368,14 @@ public class FormValidation {
 	
 	/**
 	 * Termék raktérkészletének ellenőrzésére szolgáló metódus.
-	 * Az raktárkészlet darabszáma csak egész szám lehet és nem lehet nulla.
+	 * Az raktárkészlet darabszáma csak pozitív egész szám lehet és nem lehet nulla.
 	 * 
 	 * @param productOnStock a tesztelendő adat
 	 * @param showAlert amennyiben igaz, akkor megjeleníti a figyelmeztető üzenetet
 	 * @return igaz amennyiben a paraméterben megkapott adat megfelel a validációs feltételeknek, egyébként hamis.
 	 */
 	public static boolean validateProductOnStock(String productOnStock, boolean showAlert) {
-		Pattern pattern = Pattern.compile("[1-9]([0-9]+)");
+		Pattern pattern = Pattern.compile("[1-9]([0-9]*)"); 
 		Matcher matcher = pattern.matcher(productOnStock);
 		if (matcher.find() && matcher.group().equals(productOnStock))
 			return true;
@@ -384,7 +384,7 @@ public class FormValidation {
 				Alert alert = new Alert(AlertType.WARNING);
 				alert.setTitle("Eladási ár validáció");
 				alert.setHeaderText(null);
-				alert.setContentText("Helytelen eladási ár!\n\nAz eladási ár csak egész szám lehet és nem lehet nulla!");
+				alert.setContentText("Helytelen készlet érték!\n\nA készlet csak pozitív egész szám lehet és nem lehet nulla!");
 				alert.showAndWait();
 			}
 			return false;

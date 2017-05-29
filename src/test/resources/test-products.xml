@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<products>
+	<product productID="PR00001">
+		<productName>Lenovo Ideapad - Android</productName>
+		<productType>Tablet</productType>
+		<productPurchasePrice>11200</productPurchasePrice>
+		<productSellingPrice>150000</productSellingPrice>
+		<productOnStock>100</productOnStock>
+		<productDescription>Intel® Atom™ x5 processor, Android 6.0.1
+			Marshmallow</productDescription>
+	</product>
+	<product productID="PR00002">
+		<productName>HP EliteBook 820</productName>
+		<productType>Laptop</productType>
+		<productPurchasePrice>190000</productPurchasePrice>
+		<productSellingPrice>240000</productSellingPrice>
+		<productOnStock>100</productOnStock>
+		<productDescription>Core i5, 8GB RAM, 256GB SSD</productDescription>
+	</product>
+</products>

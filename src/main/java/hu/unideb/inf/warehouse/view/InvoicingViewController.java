@@ -8,23 +8,24 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import hu.unideb.inf.warehouse.Main;
-import hu.unideb.inf.warehouse.service.*;
 import hu.unideb.inf.warehouse.model.Invoice;
 import hu.unideb.inf.warehouse.model.Product;
 import hu.unideb.inf.warehouse.model.SoldProduct;
+import hu.unideb.inf.warehouse.service.DiscountService;
+import hu.unideb.inf.warehouse.service.InvoiceHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
+import javafx.scene.control.Alert.AlertType;
+import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextInputDialog;
-import javafx.scene.control.Alert.AlertType;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
-import javafx.scene.control.Label;
 
 /**
  * Számlázást vezérlő osztály. Metódusai vezérlik a grafikus felüleltet. 
@@ -197,10 +198,11 @@ public class InvoicingViewController {
 						if (quantity <= product.getProductOnStock()) {
 
 							if (DiscountService.customerDiscount(main.getCartCustomer(), product)) {
+								double soldPrice = product.getProductSellingPrice()*(100 - main.getCartCustomer().getCustomerDiscount()) / 100;
 								SoldProduct toCart = new SoldProduct(product.getProductID(), 
 																	 product.getProductName(),
 																	 product.getProductType(), 
-																	 product.getProductSellingPrice()*(100 - main.getCartCustomer().getCustomerDiscount()) / 100,
+																	 soldPrice,
 																	 quantity);
 								productTable.getItems().get(productTable.getSelectionModel().getSelectedIndex()).setProductOnStock(product.getProductOnStock()-quantity);
 		
@@ -259,7 +261,7 @@ public class InvoicingViewController {
 			
 		} else {
 			
-			main.getInvoices().add(new Invoice("INV1111",
+			main.getInvoices().add(new Invoice(InvoiceHandler.generateNextInvoiceNumber(main.getInvoices()),
 											   LocalDate.now().toString(),
 											   DiscountService.volumeDiscount(main.getCart()), 
 											   main.getCartCustomer(), 

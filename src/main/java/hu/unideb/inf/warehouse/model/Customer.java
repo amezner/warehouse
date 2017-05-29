@@ -283,5 +283,18 @@ public class Customer {
 	public String getCustomerFullAddress() {
 		return getCustomerPostCode() + " " + getCustomerCity() + "\n" + getCustomerAddress() + "\n" + getCustomerCountry();
 	}
+
+	/* (non-Javadoc)
+	 * @see java.lang.Object#toString()
+	 */
+	@Override
+	public String toString() {
+		return "Customer [customerID=" + customerID + ", customerName=" + customerName + ", customerAddress="
+				+ customerAddress + ", customerCity=" + customerCity + ", customerPostCode=" + customerPostCode
+				+ ", customerCountry=" + customerCountry + ", customerEmail=" + customerEmail + ", customerPhone="
+				+ customerPhone + ", customerLoyalty=" + customerLoyalty + ", customerDiscount=" + customerDiscount
+				+ "]";
+	}
+	
 	
 }

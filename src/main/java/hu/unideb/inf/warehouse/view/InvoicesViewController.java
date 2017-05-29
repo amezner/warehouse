@@ -7,7 +7,7 @@ import org.slf4j.LoggerFactory;
 
 import hu.unideb.inf.warehouse.Main;
 import hu.unideb.inf.warehouse.model.Invoice;
-import hu.unideb.inf.warehouse.service.InvoiceOutput;
+import hu.unideb.inf.warehouse.service.InvoiceHandler;
 import javafx.fxml.FXML;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
@@ -58,7 +58,7 @@ public class InvoicesViewController {
 		
 		if (invoiceTable.getSelectionModel().getSelectedIndex() >= 0) {
 		  Invoice invoice = invoiceTable.getItems().get(invoiceTable.getSelectionModel().getSelectedIndex());
-		  InvoiceOutput.showInvoiceInWindow(invoice);
+		  InvoiceHandler.showInvoiceInWindow(invoice);
 		} else {
 			logger.info("Nincs kiválasztva számla!");
 		}

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<invoices>
+	<invoice invoiceNumber="INV00001">
+		<invoiceDate>2017-05-29</invoiceDate>
+		<invoiceDiscount>0</invoiceDiscount>
+		<customer customerID="CUS1004">
+			<customerName>Duis Dignissim Foundation</customerName>
+			<customerAddress>P.O. Box 598, 3615 Mattis. St.</customerAddress>
+			<customerCity>Borgomasino</customerCity>
+			<customerPostCode>53511</customerPostCode>
+			<customerCountry>Philippines</customerCountry>
+			<customerEmail>et.magnis.dis@Utsagittis.com</customerEmail>
+			<customerPhone>+50 724 362 1498</customerPhone>
+			<customerLoyalty>Ezüs</customerLoyalty>
+			<customerDiscount>13</customerDiscount>
+		</customer>
+		<soldProduct productID="PR00005">
+			<productName>HP ProBook 250 G4</productName>
+			<productType>Laptop</productType>
+			<productSoldPrice>174000.0</productSoldPrice>
+			<productSoldQuantity>3</productSoldQuantity>
+		</soldProduct>
+		<soldProduct productID="PR00007">
+			<productName>Lenovo Ideapad - Windows</productName>
+			<productType>Tablet</productType>
+			<productSoldPrice>147900.0</productSoldPrice>
+			<productSoldQuantity>3</productSoldQuantity>
+		</soldProduct>
+		<soldProduct productID="PR00009">
+			<productName>XIAOMI AMAZFIT GPS</productName>
+			<productType>Okosóra</productType>
+			<productSoldPrice>47850.0</productSoldPrice>
+			<productSoldQuantity>10</productSoldQuantity>
+		</soldProduct>
+	</invoice>
+	<invoice invoiceNumber="INV00002">
+		<invoiceDate>2017-05-29</invoiceDate>
+		<invoiceDiscount>0</invoiceDiscount>
+		<customer customerID="CUS1007">
+			<customerName>Eu Accumsan Sed Limited</customerName>
+			<customerAddress>126-8599 Dui. St.</customerAddress>
+			<customerCity>Zielona Góra</customerCity>
+			<customerPostCode>78480</customerPostCode>
+			<customerCountry>Moldova</customerCountry>
+			<customerEmail>sollicitudin@Donecdignissimmagna.edu</customerEmail>
+			<customerPhone>+35 147 582 8862</customerPhone>
+			<customerLoyalty>Bronz</customerLoyalty>
+			<customerDiscount>6</customerDiscount>
+		</customer>
+		<soldProduct productID="PR00008">
+			<productName>FITBIT BLAZE FEKETE</productName>
+			<productType>Okosóra</productType>
+			<productSoldPrice>100.0</productSoldPrice>
+			<productSoldQuantity>10</productSoldQuantity>
+		</soldProduct>
+		<soldProduct productID="PR00011">
+			<productName>WD BLUE 1TB</productName>
+			<productType>Merevlemez</productType>
+			<productSoldPrice>200.0</productSoldPrice>
+			<productSoldQuantity>20</productSoldQuantity>
+		</soldProduct>
+	</invoice>
+</invoices>

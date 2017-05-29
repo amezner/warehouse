@@ -1,6 +1,3 @@
-/**
- * 
- */
 package hu.unideb.inf.warehouse.model;
 
 import javafx.beans.binding.Bindings;
@@ -44,7 +41,7 @@ public class SoldProduct {
     public SoldProduct(String productID,
     			   String productName, 
     			   String productType, 
-    			   Integer productSoldPrice, 
+    			   Double productSoldPrice, 
     			   Integer productSoldQuantity) {
 		this.productID = new SimpleStringProperty(productID);
 		this.productName = new SimpleStringProperty(productName);
@@ -121,7 +118,7 @@ public class SoldProduct {
 	}
 
 	/**
-	 * @return the productSoldPrice as an integer value
+	 * @return the productSoldPrice as an Double value
 	 */
 	public Double getProductSoldPrice() {
 		return productSoldPrice.get();
@@ -163,7 +160,7 @@ public class SoldProduct {
 	}
 	
 	/**
-	 * @return the productSubTotal as an integer value
+	 * @return the productSubTotal as an Double value
 	 */
 	public Double getProductSubTotal() {
 		return productSubTotal.get();

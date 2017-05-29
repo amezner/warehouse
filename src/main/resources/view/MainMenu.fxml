@@ -40,22 +40,32 @@
                         <Font size="24.0" />
                      </font>
                   </Button>
-                  <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#goSaveEverything" prefHeight="100.0" prefWidth="250.0" text="Mentés" textAlignment="CENTER" wrapText="true" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                  <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#goSaveEverything" prefHeight="100.0" prefWidth="250.0" style="-fx-background-color: lightblue;" text="Mentés" textAlignment="CENTER" wrapText="true" GridPane.columnIndex="2" GridPane.rowIndex="1">
                      <font>
                         <Font size="24.0" />
                      </font>
                   </Button>
-                  <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#goLoadCustomerXML" prefHeight="100.0" prefWidth="250.0" text="Ügyfelek Betöltése" textAlignment="CENTER" wrapText="true" GridPane.rowIndex="2">
+                  <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#goLoadCustomerXML" prefHeight="100.0" prefWidth="250.0" style="-fx-background-color: orange;" text="Ügyfelek Betöltése" textAlignment="CENTER" wrapText="true" GridPane.rowIndex="2">
                      <font>
                         <Font size="24.0" />
                      </font>
                   </Button>
-                  <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#goLoadProductXML" prefHeight="100.0" prefWidth="250.0" text="Termékek Betöltése" textAlignment="CENTER" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                  <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#goLoadProductXML" prefHeight="100.0" prefWidth="250.0" style="-fx-background-color: orange;" text="Termékek Betöltése" textAlignment="CENTER" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="2">
                      <font>
                         <Font size="24.0" />
                      </font>
                   </Button>
-                  <Button alignment="CENTER" mnemonicParsing="false" onAction="#goInvoicesView" prefHeight="100.0" prefWidth="250.0" text="Számlák Megtekintése" textAlignment="CENTER" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                  <Button alignment="CENTER" mnemonicParsing="false" onAction="#goInvoicesView" prefHeight="100.0" prefWidth="250.0" style="-fx-background-color: lightgreen;" text="Számlák Megtekintése" textAlignment="CENTER" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Button>
+                  <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#goLoadInvoicesXML" prefHeight="100.0" prefWidth="250.0" style="-fx-background-color: orange;" text="Számlák Betöltése" textAlignment="CENTER" wrapText="true" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Button>
+                  <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#goLoadEverything" prefHeight="100.0" prefWidth="250.0" style="-fx-background-color: lightblue;" text="Inicializálás" textAlignment="CENTER" wrapText="true" GridPane.rowIndex="1">
                      <font>
                         <Font size="24.0" />
                      </font>

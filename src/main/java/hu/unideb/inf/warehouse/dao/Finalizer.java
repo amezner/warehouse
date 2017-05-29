@@ -17,6 +17,7 @@ import org.slf4j.LoggerFactory;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 
+import hu.unideb.inf.warehouse.dao.interfaces.FinalizerInterface;
 import hu.unideb.inf.warehouse.model.Customer;
 import hu.unideb.inf.warehouse.model.Invoice;
 import hu.unideb.inf.warehouse.model.Product;
@@ -28,23 +29,18 @@ import hu.unideb.inf.warehouse.model.SoldProduct;
  * @author amezner
  * 
  */
-public class Finalizer {
+public class Finalizer implements FinalizerInterface {
 
     /**
      * A naplózáshoz használt példány.
      */
 	private static Logger logger = LoggerFactory.getLogger(Finalizer.class);
     
-    /**
-     * Termékek elmentését végző metódus.
-     * Paraméterként kapja meg a {@link hu.unideb.inf.warehouse.model.Product} termékeket tartalmazó listát.   
-     * Alapértelmezett file : products.xml
-     * 
-     * @param products egy lista a lementendő termékekről
-     * @throws ParserConfigurationException kivételt nem kezeli osztályon belül
-     * @throws TransformerException kivételt nem kezeli osztályon belül
-     */
-    public void finalizeProducts(List<Product> products) throws ParserConfigurationException, TransformerException {
+    /* (non-Javadoc)
+	 * @see hu.unideb.inf.warehouse.dao.FinalizerInterface#finalizeProducts(java.util.List)
+	 */
+    @Override
+	public void finalizeProducts(List<Product> products) throws ParserConfigurationException, TransformerException {
 
 		DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
 		DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
@@ -89,24 +85,17 @@ public class Finalizer {
 		Transformer transformer = tFactory.newTransformer();
 		DOMSource source = new DOMSource(doc);
 		
-//		logger.info(Main.class.getResource("/database/").getPath()+"products.xml");
-//		StreamResult result = new StreamResult(new File(Main.class.getResource("/database/products.xml").getPath()));
 		StreamResult result = new StreamResult(new File("products.xml"));
 		transformer.transform(source,  result);
         
 		logger.info("Termekek lementese.");
 	}
 	
-    /**
-     * Ügyfelek elmentését végző metódus.
-     * Paraméterként kapja meg a {@link hu.unideb.inf.warehouse.model.Customer} ügyfeleket tartalmazó listát.   
-     * Alapértelmezett file : customers.xml
-     * 
-     * @param customers egy lista a lementendő ügyfelekről.
-     * @throws ParserConfigurationException kivételt nem kezeli
-     * @throws TransformerException kivételt nem kezeli
-     */
-    public void finalizeCustomers(List<Customer> customers) throws ParserConfigurationException, TransformerException {
+    /* (non-Javadoc)
+	 * @see hu.unideb.inf.warehouse.dao.FinalizerInterface#finalizeCustomers(java.util.List)
+	 */
+    @Override
+	public void finalizeCustomers(List<Customer> customers) throws ParserConfigurationException, TransformerException {
 
 		DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
 		DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
@@ -173,15 +162,10 @@ public class Finalizer {
 		logger.info("Ugyfelek lementese.");
 	}
 	
-    /**
-     * Számla adatbázis elmentését végző metódus.
-     * Paraméterként kapja meg a {@link hu.unideb.inf.warehouse.model.Invoice} számlákat tartalmazó listát.   
-     * Alapértelmezett file : invoices.xml
-     * 
-     * @param invoices egy lista a lementendő számlákról.
-     * @throws ParserConfigurationException kivételt nem kezeli
-     * @throws TransformerException kivételt nem kezeli
-     */
+    /* (non-Javadoc)
+	 * @see hu.unideb.inf.warehouse.dao.FinalizerInterface#finalizeInvoices(java.util.List)
+	 */
+	@Override
 	public void finalizeInvoices(List<Invoice> invoices) throws ParserConfigurationException, TransformerException {
 
 		DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
@@ -197,6 +181,14 @@ public class Finalizer {
 			rootElement.appendChild(invoiceElement);
 			invoiceElement.setAttribute("invoiceNumber", invoice.getInvoiceNumber());
 
+			Element invoiceDateElement = doc.createElement("invoiceDate");
+			invoiceDateElement.appendChild(doc.createTextNode(invoice.getInvoiceDate()));
+			invoiceElement.appendChild(invoiceDateElement);
+			
+			Element invoiceDiscountElement = doc.createElement("invoiceDiscount");
+			invoiceDiscountElement.appendChild(doc.createTextNode(invoice.getInvoiceDiscount().toString()));
+			invoiceElement.appendChild(invoiceDiscountElement);
+			
 			Element customerElement = doc.createElement("customer");
 			invoiceElement.appendChild(customerElement);
 			customerElement.setAttribute("customerID", invoice.getCustomer().getCustomerID());

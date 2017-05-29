@@ -17,7 +17,9 @@ import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
 
 import hu.unideb.inf.warehouse.model.Customer;
+import hu.unideb.inf.warehouse.model.Invoice;
 import hu.unideb.inf.warehouse.model.Product;
+import hu.unideb.inf.warehouse.model.SoldProduct;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 
@@ -40,7 +42,7 @@ public class Loader {
      * @throws IOException kivételt nem kezeli osztályon belül
      * @throws ParserConfigurationException kivételt nem kezeli osztályon belül
      */
-    public static ObservableList<Product> loadProducts(String fileName) throws SAXException, IOException, ParserConfigurationException {
+     public static ObservableList<Product> loadProducts(String fileName) throws SAXException, IOException, ParserConfigurationException {
 		
     	ObservableList<Product> products = FXCollections.observableArrayList();
 
@@ -70,15 +72,6 @@ public class Loader {
 				Integer.parseInt(productElement.getElementsByTagName("productOnStock").item(0).getTextContent()),
 				productElement.getElementsByTagName("productDescription").item(0).getTextContent()));
 
-
-//			product.setProductID(productElement.getAttribute("productID"));
-//			product.setProductName(productElement.getElementsByTagName("productName").item(0).getTextContent());
-//			product.setProductType(productElement.getElementsByTagName("productType").item(0).getTextContent());
-//			product.setProductPurchasePrice(Integer.parseInt(productElement.getElementsByTagName("productPurchasePrice").item(0).getTextContent()));
-//			product.setProductSellingPrice(Integer.parseInt(productElement.getElementsByTagName("productSellingPrice").item(0).getTextContent()));
-//			product.setProductOnStock(Integer.parseInt(productElement.getElementsByTagName("productOnStock").item(0).getTextContent()));
-//			product.setProductDescription(productElement.getElementsByTagName("productDescription").item(0).getTextContent());						
-//			products.add(product);
 		}
 		
 		xmlFile.close();		
@@ -115,6 +108,7 @@ public class Loader {
 			logger.info(node.getNodeName());
 			
 			Element customerElement = (Element) node;
+			
 			customers.add(new Customer(
 				customerElement.getElementsByTagName("customerID").item(0).getTextContent(),
 				customerElement.getElementsByTagName("customerName").item(0).getTextContent(),
@@ -133,4 +127,68 @@ public class Loader {
 		return customers;
 	}
 	
+    /**
+     * A számlák XML-ből történő beolvasását megvalósító metódus.
+     * 
+     * @param fileName betöltendő file neve
+     * @return egy listában adja vissza a betöltött elemeket
+     * @throws SAXException kivételt nem kezeli osztályon belül
+     * @throws IOException kivételt nem kezeli osztályon belül
+     * @throws ParserConfigurationException kivételt nem kezeli osztályon belül
+     */
+    public static ObservableList<Invoice> loadInvoices(String fileName) throws SAXException, IOException, ParserConfigurationException {
+    	
+    	ObservableList<Invoice> invoices = FXCollections.observableArrayList();
+
+		InputStream xmlFile = new FileInputStream(fileName);
+		logger.info("XML file eleresi utja :" + fileName);
+		
+		DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
+		DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
+		Document doc = dBuilder.parse(xmlFile);
+		
+		doc.getDocumentElement().normalize();
+		NodeList nlist = doc.getElementsByTagName("invoice");
+
+		for (int i = 0; i < nlist.getLength(); i++) {
+			logger.info("Beolvasott elem szama : " + i);
+
+			Node node = nlist.item(i);			
+			Element invoiceElement = (Element) node;
+
+			Element customerElement = (Element) invoiceElement.getElementsByTagName("customer").item(0);			
+			Customer customer = new Customer(
+					customerElement.getAttribute("customerID"),
+					customerElement.getElementsByTagName("customerName").item(0).getTextContent(),
+					customerElement.getElementsByTagName("customerAddress").item(0).getTextContent(),
+					customerElement.getElementsByTagName("customerCity").item(0).getTextContent(),
+					customerElement.getElementsByTagName("customerPostCode").item(0).getTextContent(),
+					customerElement.getElementsByTagName("customerCountry").item(0).getTextContent(),
+					customerElement.getElementsByTagName("customerEmail").item(0).getTextContent(),
+					customerElement.getElementsByTagName("customerPhone").item(0).getTextContent(),
+					customerElement.getElementsByTagName("customerLoyalty").item(0).getTextContent(),
+					Integer.parseInt(customerElement.getElementsByTagName("customerDiscount").item(0).getTextContent()));
+
+	    	ObservableList<SoldProduct> soldProducts = FXCollections.observableArrayList();
+			for (int j = 0; j < invoiceElement.getElementsByTagName("soldProduct").getLength(); j++) {
+				Element soldProductElement = (Element) invoiceElement.getElementsByTagName("soldProduct").item(j);
+				soldProducts.add( new SoldProduct (soldProductElement.getAttribute("productID"),
+												   soldProductElement.getElementsByTagName("productName").item(0).getTextContent(),
+												   soldProductElement.getElementsByTagName("productType").item(0).getTextContent(),
+												   Double.parseDouble(soldProductElement.getElementsByTagName("productSoldPrice").item(0).getTextContent()),
+												   Integer.parseInt(soldProductElement.getElementsByTagName("productSoldQuantity").item(0).getTextContent())));
+			}
+			
+			invoices.add(new Invoice (invoiceElement.getAttribute("invoiceNumber"),
+									  invoiceElement.getElementsByTagName("invoiceDate").item(0).getTextContent(),
+									  Integer.parseInt(invoiceElement.getElementsByTagName("invoiceDiscount").item(0).getTextContent()),
+									  customer, 
+									  soldProducts));
+
+		}
+
+		xmlFile.close();		
+		return invoices;
+	}
+    
 }

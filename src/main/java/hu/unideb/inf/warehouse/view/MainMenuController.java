@@ -14,6 +14,7 @@ import org.slf4j.Logger;
 import hu.unideb.inf.warehouse.Main;
 import hu.unideb.inf.warehouse.dao.*;
 import hu.unideb.inf.warehouse.model.Customer;
+import hu.unideb.inf.warehouse.model.Invoice;
 import hu.unideb.inf.warehouse.model.Product;
 import hu.unideb.inf.warehouse.service.FormValidation;
 import javafx.collections.ObservableList;
@@ -69,6 +70,25 @@ public class MainMenuController {
 		dao.finalizeProducts(main.getProducts());
 		dao.finalizeCustomers(main.getCustomers());
 		dao.finalizeInvoices(main.getInvoices());
+	}
+
+	@FXML
+	void goLoadEverything() {
+		try {
+			main.setProducts(Loader.loadProducts("products.xml"));
+		    main.setCustomers(Loader.loadCustomers("customers.xml"));
+		    main.setInvoices(Loader.loadInvoices("invoices.xml"));
+		} catch (SAXException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (ParserConfigurationException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+				
 	}
 	
 	@FXML
@@ -141,6 +161,27 @@ public class MainMenuController {
 
 		} else
 			logger.info("Nem választott file-t!");
+	}
+	
+	@FXML
+	void goLoadInvoicesXML() throws IOException, ParserConfigurationException, TransformerException, SAXException {
+		FileChooser fileChooser = new FileChooser();
+		FileChooser.ExtensionFilter extFilter = new FileChooser.ExtensionFilter("XML files (*.xml)", "*.xml");
+		fileChooser.getExtensionFilters().add(extFilter);
+		File file = fileChooser.showOpenDialog(main.primaryStage);
+		if (file != null) {
+			
+		    ObservableList<Invoice> loadedInvoices = Loader.loadInvoices(file.getPath());
+		    
+		    for(Invoice invoice : loadedInvoices) {
+	    		if (main.getInvoices().stream().anyMatch(p -> p.getInvoiceNumber().equals(invoice.getInvoiceNumber())))
+		    		logger.warn("Már van ilyen számla, passzoljuk");
+		    	else {
+	        		main.getInvoices().add(invoice);
+	        		logger.info(invoice.getInvoiceNumber() + " -------- Adatok rendben, felvesszük a számlák közé");
+		    	}
+		    }
+		}
 	}
 	
 	

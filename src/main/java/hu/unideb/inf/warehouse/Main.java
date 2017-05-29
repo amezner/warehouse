@@ -4,12 +4,12 @@ import java.io.IOException;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
 import hu.unideb.inf.warehouse.model.Customer;
 import hu.unideb.inf.warehouse.model.Invoice;
 import hu.unideb.inf.warehouse.model.Product;
 import hu.unideb.inf.warehouse.model.SoldProduct;
-import hu.unideb.inf.warehouse.view.MainMenuController;
-import hu.unideb.inf.warehouse.view.MainViewController;
+import hu.unideb.inf.warehouse.view.*;
 import javafx.application.Application;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -26,6 +26,10 @@ import javafx.stage.Stage;
  * @author amezner
  * 
  */
+/**
+ * @author akos
+ *
+ */
 public class Main extends Application {
 
     /**
@@ -34,7 +38,7 @@ public class Main extends Application {
     private static Logger logger = LoggerFactory.getLogger(Main.class);
     
 	private ObservableList<Customer> customers = FXCollections.observableArrayList();
-    private ObservableList<Product> products = FXCollections.observableArrayList();
+	private ObservableList<Product> products = FXCollections.observableArrayList();
     private ObservableList<SoldProduct> cart = FXCollections.observableArrayList();
     private boolean cartCustomerSelected = false;
     private Customer cartCustomer = null;
@@ -107,6 +111,11 @@ public class Main extends Application {
 		showMainMenu();
 	}
 
+	/**
+	 * JavaFX alkalmazás keretrendszer megjelenítő metódus.
+	 * 
+	 * @throws IOException nem kezeli az IOException kivételt
+	 */
 	public void showMainView() throws IOException {
         logger.info("GUI inicializálás.");
 
@@ -119,6 +128,11 @@ public class Main extends Application {
         primaryStage.show();
     }
 	
+	/**
+	 * JavaFX alkalmazás főmenü megjelenítő metódus. Ez teszi lehetővé, hogy navigálni tudjunk a különbzöző nézetek között.
+	 * 
+	 * @throws IOException nem kezeli az IOException kivételt
+	 */
 	public void showMainMenu() throws IOException {
         logger.info("Főmenü betöltése.");
 		
@@ -130,40 +144,103 @@ public class Main extends Application {
 	}
 
 
+	/**
+	 * Metódus ami visszaadja az ügyfél adatbázist.
+	 * 
+	 * @return ügyfelek
+	 */
 	public ObservableList<Customer> getCustomers() {
 		return customers;
 	}
 	
+	/**
+	 * Metódus ami visszaadja a termékek adatbázisát.
+	 * 
+	 * @return termékek
+	 */
 	public ObservableList<Product> getProducts() {
 		return products;
 	}
 
-	public void setProducts(ObservableList<Product> products) {
-		this.products = products;
-	}
-	
+	/**
+	 * Metódus ami visszaadja a kosarat.
+	 * 
+	 * @return kosár amiben eladott termékek vannak
+	 */
 	public ObservableList<SoldProduct> getCart() {
 		return cart;
 	}
 	
+	/**
+	 * Metódus ami visszaadja a számlákat.
+	 * 
+	 * @return számlák listája
+	 */
 	public ObservableList<Invoice> getInvoices() {
 		return invoices;
 	}
 
+	/**
+	 * Számlázás vezérléséhez szükséges segédmetódus.
+	 * 
+	 * @return igaz ha már választottunk ügyfelet
+	 */
 	public boolean isCartCustomerSelected() {
 		return cartCustomerSelected;
 	}
 
+	/**
+	 * Számlázás vezérléséhez szükséges segédmetódus.
+	 * 
+	 * @param cartCustomerSelected beállítja, hogy választottunk-e már ügyfelet
+	 */
 	public void setCartCustomerSelected(boolean cartCustomerSelected) {
 		this.cartCustomerSelected = cartCustomerSelected;
 	}
 
+	/**
+	 * Metódus ami visszaadja a számlázáshoz kiválasztott ügyfelet.
+	 * 
+	 * @return ügyfél
+	 */
 	public Customer getCartCustomer() {
 		return cartCustomer;
 	}
 
+	/**
+	 * Metódus ami beállítja a számlázáshoz a kiválasztott ügyfelet.
+	 * 
+	 * @param cartCustomer ügyfél
+	 */
 	public void setCartCustomer(Customer cartCustomer) {
 		this.cartCustomer = cartCustomer;
+	}
+
+	/**
+     * Ügyfelek inicializáláshoz szükséges metódus.
+     * 
+	 * @param customers beállítandó ügyfelek
+	 */
+	public void setCustomers(ObservableList<Customer> customers) {
+		this.customers = customers;
+	}
+
+	/**
+	 * Termékek inicializáláshoz szükséges metódus.
+	 * 
+	 * @param products beállítandó termékek
+	 */
+	public void setProducts(ObservableList<Product> products) {
+		this.products = products;
+	}
+
+	/**
+	 * Számlák inicializáláshoz szükséges metódus.
+	 * 
+	 * @param invoices beállítandó számlák
+	 */
+	public void setInvoices(ObservableList<Invoice> invoices) {
+		this.invoices = invoices;
 	}
 
 }

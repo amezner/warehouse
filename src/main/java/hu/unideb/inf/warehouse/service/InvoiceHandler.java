@@ -2,9 +2,11 @@ package hu.unideb.inf.warehouse.service;
 
 import java.text.DecimalFormat;
 import java.text.DecimalFormatSymbols;
+import java.util.Comparator;
 
 import hu.unideb.inf.warehouse.model.Invoice;
 import hu.unideb.inf.warehouse.model.SoldProduct;
+import javafx.collections.ObservableList;
 import javafx.scene.Group;
 import javafx.scene.Scene;
 import javafx.scene.control.ScrollPane;
@@ -12,15 +14,13 @@ import javafx.scene.text.Font;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
-
 /**
- * Számlakép generáló osztály.
- * Jelenleg csak két metódust tartalmaz, terveben van a fejlesztése.
+ * Számlakezelést végző osztály.
  * 
  * @author amezner
  *
  */
-public class InvoiceOutput {
+public class InvoiceHandler {
 
 	/**
 	 * Számla generáló metódus. Ez a változat egy ablakban jeleníti meg a számlát.
@@ -83,5 +83,21 @@ public class InvoiceOutput {
 		nt.setScene(szamla);
         nt.showAndWait();
 	
+	}
+	
+	
+	/**
+	 * Visszaadja a soron következő számlaszámot a paraméterben megkapott számla adatbázisból.
+	 *  
+	 * @param invoices számla adatbázis
+	 * @return következő számlaszám
+	 */
+	public static String generateNextInvoiceNumber(ObservableList<Invoice> invoices) {
+		String invoiceNumber = invoices.get(invoices.size()-1).getInvoiceNumber();
+		invoices.sorted(Comparator.comparing(Invoice::getInvoiceNumber));
+		int nextNumber = Integer.parseInt(invoiceNumber.substring(invoiceNumber.length()-5));
+		nextNumber++;
+		invoiceNumber = "INV" + String.format("%05d", nextNumber);
+		return invoiceNumber;
 	}
 }

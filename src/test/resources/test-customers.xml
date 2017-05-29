@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<customers>
+	<customer>
+		<customerID>CUS1000</customerID>
+		<customerName>At Fringilla Purus Inc.</customerName>
+		<customerAddress>398-8242 Metus. Av.</customerAddress>
+		<customerCity>Blankenfelde-Mahlow</customerCity>
+		<customerPostCode>23820</customerPostCode>
+		<customerCountry>Cameroon</customerCountry>
+		<customerEmail>pede.Cum.sociis@massa.edu</customerEmail>
+		<customerPhone>+96 103 511 6378</customerPhone>
+		<customerLoyalty>Bronz</customerLoyalty>
+		<customerDiscount>6</customerDiscount>
+	</customer>
+	<customer>
+		<customerID>CUS1001</customerID>
+		<customerName>Integer Eu Incorporated</customerName>
+		<customerAddress>6545 Consectetuer Rd.</customerAddress>
+		<customerCity>Nashik</customerCity>
+		<customerPostCode>72521</customerPostCode>
+		<customerCountry>Palau</customerCountry>
+		<customerEmail>adipiscing.fringilla@nonlorem.edu</customerEmail>
+		<customerPhone>+83 355 205 9418</customerPhone>
+		<customerLoyalty>Alap</customerLoyalty>
+		<customerDiscount>20</customerDiscount>
+	</customer>
+</customers>
