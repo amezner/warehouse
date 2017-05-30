@@ -198,13 +198,13 @@ public class InvoicingViewController {
 						if (quantity <= product.getProductOnStock()) {
 
 							if (DiscountService.customerDiscount(main.getCartCustomer(), product)) {
-								double soldPrice = product.getProductSellingPrice()*(100 - main.getCartCustomer().getCustomerDiscount()) / 100;
+								double soldPrice = product.getProductSellingPrice() * (double) (100 - main.getCartCustomer().getCustomerDiscount()) / 100;
 								SoldProduct toCart = new SoldProduct(product.getProductID(), 
 																	 product.getProductName(),
 																	 product.getProductType(), 
 																	 soldPrice,
 																	 quantity);
-								productTable.getItems().get(productTable.getSelectionModel().getSelectedIndex()).setProductOnStock(product.getProductOnStock()-quantity);
+								productTable.getItems().get(productTable.getSelectionModel().getSelectedIndex()).setProductOnStock(product.getProductOnStock() - quantity);
 		
 								logger.info("Termek hozzaadasa szamlahoz.");								
 								main.getCart().add(toCart);

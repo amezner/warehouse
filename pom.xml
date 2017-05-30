@@ -8,11 +8,12 @@
 	<version>1.0</version>
 	<name>Warehouse Management</name>
 	<description>Raktárkezelő program - ProgTech/ProgKörny Beadandó - NXZ10S</description>
+	<url>https://github.com/amezner/warehouse</url>
 
 	<scm>
-		<url>https://github.com/amezner/warehouse</url>
-		<connection>scm:git:git://github.com/amezner/warehouse.git</connection>
+		<connection>scm:git:https://github.com/amezner/warehouse.git</connection>
 		<developerConnection>scm:git:git@github.com:amezner/warehouse.git</developerConnection>
+		<url>https://github.com/amezner/warehouse</url>
 	</scm>
 
 	<licenses>
@@ -36,6 +37,7 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.build.outputEncoding>UTF-8</project.build.outputEncoding>
 		<mainClass>hu.unideb.inf.warehouse.Main</mainClass>
+		<github.global.server>github</github.global.server>
 	</properties>
 
 	<distributionManagement>

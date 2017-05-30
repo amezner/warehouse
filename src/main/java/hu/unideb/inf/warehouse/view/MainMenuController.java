@@ -74,21 +74,9 @@ public class MainMenuController {
 
 	@FXML
 	void goLoadEverything() {
-		try {
-			main.setProducts(Loader.loadProducts("products.xml"));
-		    main.setCustomers(Loader.loadCustomers("customers.xml"));
-		    main.setInvoices(Loader.loadInvoices("invoices.xml"));
-		} catch (SAXException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} catch (ParserConfigurationException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-				
+		main.setProducts(Loader.loadProducts("products.xml"));
+		main.setCustomers(Loader.loadCustomers("customers.xml"));
+		main.setInvoices(Loader.loadInvoices("invoices.xml"));				
 	}
 	
 	@FXML

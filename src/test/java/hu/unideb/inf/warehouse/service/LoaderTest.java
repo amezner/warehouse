@@ -11,7 +11,6 @@ import hu.unideb.inf.warehouse.model.Invoice;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 
-import java.io.File;
 import java.io.IOException;
 import java.net.URL;
 
