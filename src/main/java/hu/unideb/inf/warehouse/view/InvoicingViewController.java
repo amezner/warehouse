@@ -125,12 +125,12 @@ public class InvoicingViewController {
 		productSellingPriceColumn.setCellValueFactory(c -> c.getValue().getProductSellingPriceProperty().asObject());
 		productOnStockColumn.setCellValueFactory(c -> c.getValue().getProductOnStockProperty().asObject());
 
-		cartIDColumn.setCellValueFactory(c -> c.getValue().getProductIDProperty());
-		cartNameColumn.setCellValueFactory(c -> c.getValue().getProductNameProperty());
-		cartTypeColumn.setCellValueFactory(c -> c.getValue().getProductTypeProperty());
-		cartSoldPriceColumn.setCellValueFactory(c -> c.getValue().getProductSoldPriceProperty().asObject());
-		cartQuantityColumn.setCellValueFactory(c -> c.getValue().getProductSoldQuantityProperty().asObject());
-		cartSubTotalColumn.setCellValueFactory(c -> c.getValue().getProductSubTotalProperty().asObject());
+		cartIDColumn.setCellValueFactory(c -> c.getValue().getSoldProductIDProperty());
+		cartNameColumn.setCellValueFactory(c -> c.getValue().getSoldProductNameProperty());
+		cartTypeColumn.setCellValueFactory(c -> c.getValue().getSoldProductTypeProperty());
+		cartSoldPriceColumn.setCellValueFactory(c -> c.getValue().getSoldProductSoldPriceProperty().asObject());
+		cartQuantityColumn.setCellValueFactory(c -> c.getValue().getSoldProductSoldQuantityProperty().asObject());
+		cartSubTotalColumn.setCellValueFactory(c -> c.getValue().getSoldProductSubTotalProperty().asObject());
 
 	}
 

@@ -187,14 +187,14 @@ public class Loader {
 								customerElement.getElementsByTagName("customerLoyalty").item(0).getTextContent(),
 								Integer.parseInt(customerElement.getElementsByTagName("customerDiscount").item(0).getTextContent()));
 
-				    	ObservableList<SoldProduct> soldProducts = FXCollections.observableArrayList();
+						ObservableList<SoldProduct> soldProducts = FXCollections.observableArrayList();
 						for (int j = 0; j < invoiceElement.getElementsByTagName("soldProduct").getLength(); j++) {
 							Element soldProductElement = (Element) invoiceElement.getElementsByTagName("soldProduct").item(j);
-							soldProducts.add( new SoldProduct (soldProductElement.getAttribute("productID"),
-															   soldProductElement.getElementsByTagName("productName").item(0).getTextContent(),
-															   soldProductElement.getElementsByTagName("productType").item(0).getTextContent(),
-															   Double.parseDouble(soldProductElement.getElementsByTagName("productSoldPrice").item(0).getTextContent()),
-															   Integer.parseInt(soldProductElement.getElementsByTagName("productSoldQuantity").item(0).getTextContent())));
+							soldProducts.add( new SoldProduct (soldProductElement.getAttribute("soldProductID"),
+															   soldProductElement.getElementsByTagName("soldProductName").item(0).getTextContent(),
+															   soldProductElement.getElementsByTagName("soldProductType").item(0).getTextContent(),
+															   Double.parseDouble(soldProductElement.getElementsByTagName("soldProductPrice").item(0).getTextContent()),
+															   Integer.parseInt(soldProductElement.getElementsByTagName("soldProductQuantity").item(0).getTextContent())));
 						}
 						
 						invoices.add(new Invoice (invoiceElement.getAttribute("invoiceNumber"),

@@ -258,22 +258,22 @@ public class Finalizer implements FinalizerInterface {
 
 					Element soldProductElement = doc.createElement("soldProduct");
 					invoiceElement.appendChild(soldProductElement);
-					soldProductElement.setAttribute("productID", soldProduct.getProductID());
+					soldProductElement.setAttribute("soldProductID", soldProduct.getSoldProductID());
 					
-					Element soldProductNameElement = doc.createElement("productName");
-					soldProductNameElement.appendChild(doc.createTextNode(soldProduct.getProductName()));
+					Element soldProductNameElement = doc.createElement("soldProductName");
+					soldProductNameElement.appendChild(doc.createTextNode(soldProduct.getSoldProductName()));
 					soldProductElement.appendChild(soldProductNameElement);
 
-					Element soldProductTypeElement = doc.createElement("productType");
-					soldProductTypeElement.appendChild(doc.createTextNode(soldProduct.getProductType()));
+					Element soldProductTypeElement = doc.createElement("soldProductType");
+					soldProductTypeElement.appendChild(doc.createTextNode(soldProduct.getSoldProductType()));
 					soldProductElement.appendChild(soldProductTypeElement);
 					
-					Element soldProductSoldPriceElement = doc.createElement("productSoldPrice");
-					soldProductSoldPriceElement.appendChild(doc.createTextNode(soldProduct.getProductSoldPrice().toString()));
+					Element soldProductSoldPriceElement = doc.createElement("soldProductPrice");
+					soldProductSoldPriceElement.appendChild(doc.createTextNode(soldProduct.getSoldProductSoldPrice().toString()));
 					soldProductElement.appendChild(soldProductSoldPriceElement);		
 
-					Element soldProductSoldQuantityElement = doc.createElement("productSoldQuantity");
-					soldProductSoldQuantityElement.appendChild(doc.createTextNode(soldProduct.getProductSoldQuantity().toString()));
+					Element soldProductSoldQuantityElement = doc.createElement("soldProductQuantity");
+					soldProductSoldQuantityElement.appendChild(doc.createTextNode(soldProduct.getSoldProductSoldQuantity().toString()));
 					soldProductElement.appendChild(soldProductSoldQuantityElement);	
 						
 				}

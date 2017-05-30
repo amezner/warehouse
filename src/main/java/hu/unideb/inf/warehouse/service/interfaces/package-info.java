@@ -1,4 +1,6 @@
 /**
+ * Szolgáltatásokhoz tartozó interface, jelenleg nem implementált.
+ * 
  * @author amezner
  *
  */

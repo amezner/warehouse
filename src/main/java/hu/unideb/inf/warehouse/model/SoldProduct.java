@@ -15,12 +15,12 @@ import javafx.beans.property.StringProperty;
  */
 public class SoldProduct {
 
-	private StringProperty productID;
-    private StringProperty productName;
-    private StringProperty productType;
-    private SimpleDoubleProperty productSoldPrice;
-    private SimpleIntegerProperty productSoldQuantity;
-    private SimpleDoubleProperty productSubTotal;
+	private StringProperty soldSoldProductID;
+    private StringProperty soldSoldProductName;
+    private StringProperty soldSoldProductType;
+    private SimpleDoubleProperty soldSoldProductSoldPrice;
+    private SimpleIntegerProperty soldSoldProductSoldQuantity;
+    private SimpleDoubleProperty soldSoldProductSubTotal;
 	
 	/**
 	 * Üres konstruktor.
@@ -32,152 +32,152 @@ public class SoldProduct {
 	/**
 	 * Eladott termék egyed generáláshoz használt konstruktor.
 	 * 
-	 * @param productID termékazonosító, egyedi kell, hogy legyen
-	 * @param productName termék neve
-	 * @param productType termék típusa
-	 * @param productSoldPrice eladási ár
-	 * @param productSoldQuantity eladott mennyiség
+	 * @param soldSoldProductID termékazonosító, egyedi kell, hogy legyen
+	 * @param soldSoldProductName termék neve
+	 * @param soldSoldProductType termék típusa
+	 * @param soldSoldProductSoldPrice eladási ár
+	 * @param soldSoldProductSoldQuantity eladott mennyiség
 	 */
-    public SoldProduct(String productID,
-    			   String productName, 
-    			   String productType, 
-    			   Double productSoldPrice, 
-    			   Integer productSoldQuantity) {
-		this.productID = new SimpleStringProperty(productID);
-		this.productName = new SimpleStringProperty(productName);
-		this.productType = new SimpleStringProperty(productType);
-		this.productSoldPrice = new SimpleDoubleProperty(productSoldPrice);
-		this.productSoldQuantity = new SimpleIntegerProperty(productSoldQuantity);
+    public SoldProduct(String soldSoldProductID,
+    			   String soldSoldProductName, 
+    			   String soldSoldProductType, 
+    			   Double soldSoldProductSoldPrice, 
+    			   Integer soldSoldProductSoldQuantity) {
+		this.soldSoldProductID = new SimpleStringProperty(soldSoldProductID);
+		this.soldSoldProductName = new SimpleStringProperty(soldSoldProductName);
+		this.soldSoldProductType = new SimpleStringProperty(soldSoldProductType);
+		this.soldSoldProductSoldPrice = new SimpleDoubleProperty(soldSoldProductSoldPrice);
+		this.soldSoldProductSoldQuantity = new SimpleIntegerProperty(soldSoldProductSoldQuantity);
 		
-		this.productSubTotal = new SimpleDoubleProperty();
-        NumberBinding multiplication = Bindings.multiply(this.getProductSoldPriceProperty(), this.getProductSoldQuantityProperty());
-        this.getProductSubTotalProperty().bind(multiplication);
+		this.soldSoldProductSubTotal = new SimpleDoubleProperty();
+        NumberBinding multiplication = Bindings.multiply(this.getSoldProductSoldPriceProperty(), this.getSoldProductSoldQuantityProperty());
+        this.getSoldProductSubTotalProperty().bind(multiplication);
     }
 
 	/**
-	 * @return the productID as a string 
+	 * @return the soldSoldProductID as a string 
 	 */
-	public String getProductID() {
-		return productID.get();
+	public String getSoldProductID() {
+		return soldSoldProductID.get();
 	}
 
 	/**
-	 * @return the productID as a property
+	 * @return the soldSoldProductID as a property
 	 */
-	public StringProperty getProductIDProperty() {
-		return productID;
+	public StringProperty getSoldProductIDProperty() {
+		return soldSoldProductID;
 	}
 
 	/**
-	 * @param productID the productID to set
+	 * @param soldSoldProductID the soldSoldProductID to set
 	 */
-	public void setProductID(String productID) {
-		this.productID.set(productID);
+	public void setSoldProductID(String soldSoldProductID) {
+		this.soldSoldProductID.set(soldSoldProductID);
 	}
 
 	/**
-	 * @return the productName as a string
+	 * @return the soldSoldProductName as a string
 	 */
-	public String getProductName() {
-		return productName.get();
+	public String getSoldProductName() {
+		return soldSoldProductName.get();
 	}
 	
 	/**
-	 * @return the productName as a property
+	 * @return the soldSoldProductName as a property
 	 */
-	public StringProperty getProductNameProperty() {
-		return productName;
+	public StringProperty getSoldProductNameProperty() {
+		return soldSoldProductName;
 	}
 
 	/**
-	 * @param productName the productName to set
+	 * @param soldSoldProductName the soldSoldProductName to set
 	 */
-	public void setProductName(String productName) {
-		this.productName.set(productName);
+	public void setSoldProductName(String soldSoldProductName) {
+		this.soldSoldProductName.set(soldSoldProductName);
 	}
 
 	/**
-	 * @return the productType as a string
+	 * @return the soldSoldProductType as a string
 	 */
-	public String getProductType() {
-		return productType.get();
+	public String getSoldProductType() {
+		return soldSoldProductType.get();
 	}
 	
 	/**
-	 * @return the productType as a property
+	 * @return the soldSoldProductType as a property
 	 */
-	public StringProperty getProductTypeProperty() {
-		return productType;
+	public StringProperty getSoldProductTypeProperty() {
+		return soldSoldProductType;
 	}
 
 	/**
-	 * @param productType the productType to set
+	 * @param soldSoldProductType the soldSoldProductType to set
 	 */
-	public void setProductType(String productType) {
-		this.productType.set(productType);
+	public void setSoldProductType(String soldSoldProductType) {
+		this.soldSoldProductType.set(soldSoldProductType);
 	}
 
 	/**
-	 * @return the productSoldPrice as an Double value
+	 * @return the soldSoldProductSoldPrice as an Double value
 	 */
-	public Double getProductSoldPrice() {
-		return productSoldPrice.get();
+	public Double getSoldProductSoldPrice() {
+		return soldSoldProductSoldPrice.get();
 	}
 	
 	/**
-	 * @return the productSoldPrice
+	 * @return the soldSoldProductSoldPrice
 	 */
-	public SimpleDoubleProperty getProductSoldPriceProperty() {
-		return productSoldPrice;
+	public SimpleDoubleProperty getSoldProductSoldPriceProperty() {
+		return soldSoldProductSoldPrice;
 	}
 
 	/**
-	 * @param productSoldPrice the productSoldPrice to set
+	 * @param soldSoldProductSoldPrice the soldSoldProductSoldPrice to set
 	 */
-	public void setProductSoldPrice(Double productSoldPrice) {
-		this.productSoldPrice.set(productSoldPrice);
+	public void setSoldProductSoldPrice(Double soldSoldProductSoldPrice) {
+		this.soldSoldProductSoldPrice.set(soldSoldProductSoldPrice);
 	}
  
 	/**
-	 * @return the productSoldQuantity as an integer value
+	 * @return the soldSoldProductSoldQuantity as an integer value
 	 */
-	public Integer getProductSoldQuantity() {
-		return productSoldQuantity.get();
+	public Integer getSoldProductSoldQuantity() {
+		return soldSoldProductSoldQuantity.get();
 	}
 	
 	/**
-	 * @return the productSoldQuantity
+	 * @return the soldSoldProductSoldQuantity
 	 */
-	public SimpleIntegerProperty getProductSoldQuantityProperty() {
-		return productSoldQuantity;
+	public SimpleIntegerProperty getSoldProductSoldQuantityProperty() {
+		return soldSoldProductSoldQuantity;
 	}
 
 	/**
-	 * @param productSoldQuantity the productSoldQuantity to set
+	 * @param soldSoldProductSoldQuantity the soldSoldProductSoldQuantity to set
 	 */
-	public void setProductSoldQuantity(Integer productSoldQuantity) {
-		this.productSoldQuantity.set(productSoldQuantity);
+	public void setSoldProductSoldQuantity(Integer soldSoldProductSoldQuantity) {
+		this.soldSoldProductSoldQuantity.set(soldSoldProductSoldQuantity);
 	}
 	
 	/**
-	 * @return the productSubTotal as an Double value
+	 * @return the soldSoldProductSubTotal as an Double value
 	 */
-	public Double getProductSubTotal() {
-		return productSubTotal.get();
+	public Double getSoldProductSubTotal() {
+		return soldSoldProductSubTotal.get();
 	}
 	
 	/**
-	 * @return the productSubTotal
+	 * @return the soldSoldProductSubTotal
 	 */
-	public SimpleDoubleProperty getProductSubTotalProperty() {
-		return productSubTotal;
+	public SimpleDoubleProperty getSoldProductSubTotalProperty() {
+		return soldSoldProductSubTotal;
 	}
 
 	/**
-	 * @param productSubTotal the productSubTotal to set
+	 * @param soldSoldProductSubTotal the soldSoldProductSubTotal to set
 	 */
-	public void setProductSubTotal(Double productSubTotal) {
-		this.productSubTotal.set(productSubTotal);
+	public void setSoldProductSubTotal(Double soldSoldProductSubTotal) {
+		this.soldSoldProductSubTotal.set(soldSoldProductSubTotal);
 	}
 
 }

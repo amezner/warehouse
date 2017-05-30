@@ -48,7 +48,7 @@ public class DiscountService {
 	public static int volumeDiscount (ObservableList<SoldProduct> cart) {
 		int soldQuantity = 0;
 		for (SoldProduct cartItem : cart) {
-			soldQuantity = soldQuantity + cartItem.getProductSoldQuantity(); 
+			soldQuantity = soldQuantity + cartItem.getSoldProductSoldQuantity(); 
 		}
 		if (soldQuantity < 100)
 			return 0;

@@ -1,1 +1,123 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?><invoices><invoice invoiceNumber="INV00001"><invoiceDate>2017-05-29</invoiceDate><invoiceDiscount>0</invoiceDiscount><customer customerID="CUS1004"><customerName>Duis Dignissim Foundation</customerName><customerAddress>P.O. Box 598, 3615 Mattis. St.</customerAddress><customerCity>Borgomasino</customerCity><customerPostCode>53511</customerPostCode><customerCountry>Philippines</customerCountry><customerEmail>et.magnis.dis@Utsagittis.com</customerEmail><customerPhone>+50 724 362 1498</customerPhone><customerLoyalty>Ezüs</customerLoyalty><customerDiscount>13</customerDiscount></customer><soldProduct productID="PR00005"><productName>HP ProBook 250 G4</productName><productType>Laptop</productType><productSoldPrice>174000.0</productSoldPrice><productSoldQuantity>3</productSoldQuantity></soldProduct><soldProduct productID="PR00007"><productName>Lenovo Ideapad - Windows</productName><productType>Tablet</productType><productSoldPrice>147900.0</productSoldPrice><productSoldQuantity>3</productSoldQuantity></soldProduct><soldProduct productID="PR00009"><productName>XIAOMI AMAZFIT GPS</productName><productType>Okosóra</productType><productSoldPrice>47850.0</productSoldPrice><productSoldQuantity>10</productSoldQuantity></soldProduct></invoice><invoice invoiceNumber="INV00002"><invoiceDate>2017-05-29</invoiceDate><invoiceDiscount>0</invoiceDiscount><customer customerID="CUS1007"><customerName>Eu Accumsan Sed Limited</customerName><customerAddress>126-8599 Dui. St.</customerAddress><customerCity>Zielona Góra</customerCity><customerPostCode>78480</customerPostCode><customerCountry>Moldova</customerCountry><customerEmail>sollicitudin@Donecdignissimmagna.edu</customerEmail><customerPhone>+35 147 582 8862</customerPhone><customerLoyalty>Bronz</customerLoyalty><customerDiscount>6</customerDiscount></customer><soldProduct productID="PR00008"><productName>FITBIT BLAZE FEKETE</productName><productType>Okosóra</productType><productSoldPrice>56400.0</productSoldPrice><productSoldQuantity>10</productSoldQuantity></soldProduct><soldProduct productID="PR00011"><productName>WD BLUE 1TB</productName><productType>Merevlemez</productType><productSoldPrice>14100.0</productSoldPrice><productSoldQuantity>15</productSoldQuantity></soldProduct></invoice><invoice invoiceNumber="INV00003"><invoiceDate>2017-05-29</invoiceDate><invoiceDiscount>1</invoiceDiscount><customer customerID="CUS1003"><customerName>Velit Cras Industries</customerName><customerAddress>666-3355 Magna Avenue</customerAddress><customerCity>Jamnagar</customerCity><customerPostCode>61120</customerPostCode><customerCountry>Ukraine</customerCountry><customerEmail>tempus.non@tinciduntvehicularisus.com</customerEmail><customerPhone>+65 680 810 1632</customerPhone><customerLoyalty>Arany</customerLoyalty><customerDiscount>10</customerDiscount></customer><soldProduct productID="PR00010"><productName>SEAGATE BARRACUDA 1TB</productName><productType>Merevlemez</productType><productSoldPrice>16200.0</productSoldPrice><productSoldQuantity>100</productSoldQuantity></soldProduct></invoice><invoice invoiceNumber="INV00005"><invoiceDate>2017-05-29</invoiceDate><invoiceDiscount>2</invoiceDiscount><customer customerID="CUS1097"><customerName>Ac Turpis Inc.</customerName><customerAddress>8064 Massa Av.</customerAddress><customerCity>Northumberland</customerCity><customerPostCode>85882</customerPostCode><customerCountry>Brunei</customerCountry><customerEmail>Aliquam.ultrices@feugiat.org</customerEmail><customerPhone>+16 872 475 2196</customerPhone><customerLoyalty>Bronz</customerLoyalty><customerDiscount>6</customerDiscount></customer><soldProduct productID="PR00004"><productName>MacBook Pro 13</productName><productType>Laptop</productType><productSoldPrice>601600.0</productSoldPrice><productSoldQuantity>10</productSoldQuantity></soldProduct><soldProduct productID="PR00006"><productName>HP ProBook 820</productName><productType>Laptop</productType><productSoldPrice>131600.0</productSoldPrice><productSoldQuantity>100</productSoldQuantity></soldProduct><soldProduct productID="PR00005"><productName>HP ProBook 250 G4</productName><productType>Laptop</productType><productSoldPrice>188000.0</productSoldPrice><productSoldQuantity>300</productSoldQuantity></soldProduct><soldProduct productID="PR00010"><productName>SEAGATE BARRACUDA 1TB</productName><productType>Merevlemez</productType><productSoldPrice>16920.0</productSoldPrice><productSoldQuantity>100</productSoldQuantity></soldProduct></invoice></invoices>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<invoices>
+	<invoice invoiceNumber="INV00001">
+		<invoiceDate>2017-05-29</invoiceDate>
+		<invoiceDiscount>0</invoiceDiscount>
+		<customer customerID="CUS1004">
+			<customerName>Duis Dignissim Foundation</customerName>
+			<customerAddress>P.O. Box 598, 3615 Mattis. St.</customerAddress>
+			<customerCity>Borgomasino</customerCity>
+			<customerPostCode>53511</customerPostCode>
+			<customerCountry>Philippines</customerCountry>
+			<customerEmail>et.magnis.dis@Utsagittis.com</customerEmail>
+			<customerPhone>+50 724 362 1498</customerPhone>
+			<customerLoyalty>Ezüs</customerLoyalty>
+			<customerDiscount>13</customerDiscount>
+		</customer>
+		<soldProduct soldProductID="PR00005">
+			<soldProductName>HP ProBook 250 G4</soldProductName>
+			<soldProductType>Laptop</soldProductType>
+			<soldProductPrice>174000.0</soldProductPrice>
+			<soldProductQuantity>3</soldProductQuantity>
+		</soldProduct>
+		<soldProduct soldProductID="PR00007">
+			<soldProductName>Lenovo Ideapad - Windows</soldProductName>
+			<soldProductType>Tablet</soldProductType>
+			<soldProductPrice>147900.0</soldProductPrice>
+			<soldProductQuantity>3</soldProductQuantity>
+		</soldProduct>
+		<soldProduct soldProductID="PR00009">
+			<soldProductName>XIAOMI AMAZFIT GPS</soldProductName>
+			<soldProductType>Okosóra</soldProductType>
+			<soldProductPrice>47850.0</soldProductPrice>
+			<soldProductQuantity>10</soldProductQuantity>
+		</soldProduct>
+	</invoice>
+	<invoice invoiceNumber="INV00002">
+		<invoiceDate>2017-05-29</invoiceDate>
+		<invoiceDiscount>0</invoiceDiscount>
+		<customer customerID="CUS1007">
+			<customerName>Eu Accumsan Sed Limited</customerName>
+			<customerAddress>126-8599 Dui. St.</customerAddress>
+			<customerCity>Zielona Góra</customerCity>
+			<customerPostCode>78480</customerPostCode>
+			<customerCountry>Moldova</customerCountry>
+			<customerEmail>sollicitudin@Donecdignissimmagna.edu</customerEmail>
+			<customerPhone>+35 147 582 8862</customerPhone>
+			<customerLoyalty>Bronz</customerLoyalty>
+			<customerDiscount>6</customerDiscount>
+		</customer>
+		<soldProduct soldProductID="PR00008">
+			<soldProductName>FITBIT BLAZE FEKETE</soldProductName>
+			<soldProductType>Okosóra</soldProductType>
+			<soldProductPrice>56400.0</soldProductPrice>
+			<soldProductQuantity>10</soldProductQuantity>
+		</soldProduct>
+		<soldProduct soldProductID="PR00011">
+			<soldProductName>WD BLUE 1TB</soldProductName>
+			<soldProductType>Merevlemez</soldProductType>
+			<soldProductPrice>14100.0</soldProductPrice>
+			<soldProductQuantity>15</soldProductQuantity>
+		</soldProduct>
+	</invoice>
+	<invoice invoiceNumber="INV00003">
+		<invoiceDate>2017-05-29</invoiceDate>
+		<invoiceDiscount>1</invoiceDiscount>
+		<customer customerID="CUS1003">
+			<customerName>Velit Cras Industries</customerName>
+			<customerAddress>666-3355 Magna Avenue</customerAddress>
+			<customerCity>Jamnagar</customerCity>
+			<customerPostCode>61120</customerPostCode>
+			<customerCountry>Ukraine</customerCountry>
+			<customerEmail>tempus.non@tinciduntvehicularisus.com</customerEmail>
+			<customerPhone>+65 680 810 1632</customerPhone>
+			<customerLoyalty>Arany</customerLoyalty>
+			<customerDiscount>10</customerDiscount>
+		</customer>
+		<soldProduct soldProductID="PR00010">
+			<soldProductName>SEAGATE BARRACUDA 1TB</soldProductName>
+			<soldProductType>Merevlemez</soldProductType>
+			<soldProductPrice>16200.0</soldProductPrice>
+			<soldProductQuantity>100</soldProductQuantity>
+		</soldProduct>
+	</invoice>
+	<invoice invoiceNumber="INV00005">
+		<invoiceDate>2017-05-29</invoiceDate>
+		<invoiceDiscount>2</invoiceDiscount>
+		<customer customerID="CUS1097">
+			<customerName>Ac Turpis Inc.</customerName>
+			<customerAddress>8064 Massa Av.</customerAddress>
+			<customerCity>Northumberland</customerCity>
+			<customerPostCode>85882</customerPostCode>
+			<customerCountry>Brunei</customerCountry>
+			<customerEmail>Aliquam.ultrices@feugiat.org</customerEmail>
+			<customerPhone>+16 872 475 2196</customerPhone>
+			<customerLoyalty>Bronz</customerLoyalty>
+			<customerDiscount>6</customerDiscount>
+		</customer>
+		<soldProduct soldProductID="PR00004">
+			<soldProductName>MacBook Pro 13</soldProductName>
+			<soldProductType>Laptop</soldProductType>
+			<soldProductPrice>601600.0</soldProductPrice>
+			<soldProductQuantity>10</soldProductQuantity>
+		</soldProduct>
+		<soldProduct soldProductID="PR00006">
+			<soldProductName>HP ProBook 820</soldProductName>
+			<soldProductType>Laptop</soldProductType>
+			<soldProductPrice>131600.0</soldProductPrice>
+			<soldProductQuantity>100</soldProductQuantity>
+		</soldProduct>
+		<soldProduct soldProductID="PR00005">
+			<soldProductName>HP ProBook 250 G4</soldProductName>
+			<soldProductType>Laptop</soldProductType>
+			<soldProductPrice>188000.0</soldProductPrice>
+			<soldProductQuantity>300</soldProductQuantity>
+		</soldProduct>
+		<soldProduct soldProductID="PR00010">
+			<soldProductName>SEAGATE BARRACUDA 1TB</soldProductName>
+			<soldProductType>Merevlemez</soldProductType>
+			<soldProductPrice>16920.0</soldProductPrice>
+			<soldProductQuantity>100</soldProductQuantity>
+		</soldProduct>
+	</invoice>
+</invoices>

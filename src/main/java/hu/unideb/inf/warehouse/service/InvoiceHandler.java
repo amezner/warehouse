@@ -53,12 +53,12 @@ public class InvoiceHandler {
 		sb.append(String.format("%-10s%-30s%-15s%15s%15s%20s%n", "ID" , "Megnevezés" , "Típus" , "Eladási Ár" , "Mennyiség" , "Részösszeg"));
 		for (SoldProduct soldProduct : invoice.getSoldProducts()) {
 			sb.append(String.format("%-10s%-30s%-15s%15s%15s%20s%n",
-									soldProduct.getProductID(),
-									soldProduct.getProductName(),
-									soldProduct.getProductType(),
-									soldProduct.getProductSoldPrice(),
-									soldProduct.getProductSoldQuantity(),
-									decimalformat.format(soldProduct.getProductSubTotal())));
+									soldProduct.getSoldProductID(),
+									soldProduct.getSoldProductName(),
+									soldProduct.getSoldProductType(),
+									soldProduct.getSoldProductSoldPrice(),
+									soldProduct.getSoldProductSoldQuantity(),
+									decimalformat.format(soldProduct.getSoldProductSubTotal())));
 			
 		}
 		sb.append("\n");

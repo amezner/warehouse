@@ -1,5 +1,5 @@
 /**
- * Az alkalmalzás üzleti logikáját megvalósító.
+ * Az alkalmalzás üzleti logikáját megvalósító csomag.
  * 
  * @author amezner
  *
