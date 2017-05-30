@@ -91,60 +91,79 @@ public class ProductViewController {
     }
     
 	@FXML
-	void addNewProductAction() throws IOException {
+	void addNewProductAction() {
+
+        logger.info("Új Termék Hozzáadása Nézet betöltése.");
 
 		Product product = new Product("", "", "", 0, 0, 0, "");
 		
 		FXMLLoader loader = new FXMLLoader();
         loader.setLocation(Main.class.getResource("/view/EditProduct.fxml"));
-        BorderPane addNewProduct = loader.load();
-        
-        Stage addDialogStage = new Stage();
-        addDialogStage.setTitle("Új Termék Felvétele");
-        addDialogStage.initModality(Modality.WINDOW_MODAL);
-        addDialogStage.initOwner(main.primaryStage);
-        Scene scene = new Scene(addNewProduct);
-        addDialogStage.setScene(scene);
-        ((EditProductController)loader.getController()).setProduct(product);
-        addDialogStage.showAndWait(); 
-		
-		if (!product.getProductID().isEmpty())
-			if (!main.getProducts().stream().anyMatch(p -> p.getProductID().equals(product.getProductID())))
-				main.getProducts().add(product);
-			else {
-				logger.warn("Van már ilyen termék!");
-				
-				Alert alert = new Alert(AlertType.WARNING);
-				alert.setTitle("Termék azonsító HIBA");
-				alert.setHeaderText(null);
-				alert.setContentText("Ezzel a termék azonosítóval már létezik termék ezért nem vettük fel!");
-				alert.showAndWait();
+		try {
+			
+			BorderPane addNewProduct = loader.load();
+	        Stage addDialogStage = new Stage();
+	        addDialogStage.setTitle("Új Termék Felvétele");
+	        addDialogStage.initModality(Modality.WINDOW_MODAL);
+	        addDialogStage.initOwner(main.primaryStage);
+	        Scene scene = new Scene(addNewProduct);
+	        addDialogStage.setScene(scene);
+	        ((EditProductController)loader.getController()).setProduct(product);
+	        addDialogStage.showAndWait(); 
+			
+			if (!product.getProductID().isEmpty()) {
+				if (!main.getProducts().stream().anyMatch(p -> p.getProductID().equals(product.getProductID())))
+					main.getProducts().add(product);
+				else {
+					logger.warn("Van már ilyen termék!");
+					
+					Alert alert = new Alert(AlertType.WARNING);
+					alert.setTitle("Termék azonsító HIBA");
+					alert.setHeaderText(null);
+					alert.setContentText("Ezzel a termék azonosítóval már létezik termék ezért nem vettük fel!");
+					alert.showAndWait();
+				}
 			}
+		} catch (IOException e) {
+			
+			logger.error("IO hiba Új Termék Hozzáadás Nézet betöltés közben: " + e.getMessage());
+			
+		}
+		
 	}
 	
 	@FXML
-	void editProductAction() throws IOException {
+	void editProductAction() {
 	
-        logger.info("Termek szerkesztes nezet betoltese.");
+        logger.info("Termék Szerkesztés Nézet betöltése.");
         
 		FXMLLoader loader = new FXMLLoader();
         loader.setLocation(Main.class.getResource("/view/EditProduct.fxml"));
-        BorderPane addNewProduct = loader.load();
-        
-        Stage addDialogStage = new Stage();
-        addDialogStage.setTitle("Új Termék Felvétele");
-        addDialogStage.initModality(Modality.WINDOW_MODAL);
-        addDialogStage.initOwner(main.primaryStage);
-        Scene scene = new Scene(addNewProduct);
-        addDialogStage.setScene(scene);
-        ((EditProductController)loader.getController()).setProduct(productTable.getItems().get(productTable.getSelectionModel().getSelectedIndex()));
-        addDialogStage.showAndWait(); 
-        
+		try {
+			
+			BorderPane addNewProduct = loader.load();
+	        Stage addDialogStage = new Stage();
+	        addDialogStage.setTitle("Új Termék Felvétele");
+	        addDialogStage.initModality(Modality.WINDOW_MODAL);
+	        addDialogStage.initOwner(main.primaryStage);
+	        Scene scene = new Scene(addNewProduct);
+	        addDialogStage.setScene(scene);
+	        ((EditProductController)loader.getController()).setProduct(productTable.getItems().get(productTable.getSelectionModel().getSelectedIndex()));
+	        addDialogStage.showAndWait();
+	        
+		} catch (IOException e) {
+			
+			logger.error("IO hiba Termék Szerkesztés Nézet betöltés közben: " + e.getMessage());
+			
+		}
+		
 	}
 	
 	@FXML
-	void deleteProductAction() throws IOException {
+	void deleteProductAction() {
 		
+        logger.info("Termék törlése.");
+
 		productTable.getItems().remove(productTable.getSelectionModel().getSelectedIndex());
 	
 	}

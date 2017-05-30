@@ -27,7 +27,7 @@ public interface FinalizerInterface {
 	 * @throws ParserConfigurationException kivételt nem kezeli osztályon belül
 	 * @throws TransformerException kivételt nem kezeli osztályon belül
 	 */
-	void finalizeProducts(List<Product> products) throws ParserConfigurationException, TransformerException;
+	void finalizeProducts(List<Product> products);
 
 	/**
 	 * Ügyfelek elmentését végző metódus.
@@ -38,7 +38,7 @@ public interface FinalizerInterface {
 	 * @throws ParserConfigurationException kivételt nem kezeli
 	 * @throws TransformerException kivételt nem kezeli
 	 */
-	void finalizeCustomers(List<Customer> customers) throws ParserConfigurationException, TransformerException;
+	void finalizeCustomers(List<Customer> customers);
 
 	/**
 	 * Számla adatbázis elmentését végző metódus.
@@ -49,6 +49,6 @@ public interface FinalizerInterface {
 	 * @throws ParserConfigurationException kivételt nem kezeli
 	 * @throws TransformerException kivételt nem kezeli
 	 */
-	void finalizeInvoices(List<Invoice> invoices) throws ParserConfigurationException, TransformerException;
+	void finalizeInvoices(List<Invoice> invoices);
 
 }

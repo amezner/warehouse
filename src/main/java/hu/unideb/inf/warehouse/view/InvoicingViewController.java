@@ -100,6 +100,9 @@ public class InvoicingViewController {
 	@FXML
 	private Label customerDiscountLabel;
 
+    /**
+     * JavaFX elemek inicializálását végző metódus.
+     */
 	@FXML
 	void initialize() {
 
@@ -132,30 +135,37 @@ public class InvoicingViewController {
 	}
 
 	
-	void showChooseCustomer() throws IOException {
+	void showChooseCustomer() {
         
 		logger.info("Ügyfélválasztó betöltése számlázáshoz.");
         
 		FXMLLoader loader = new FXMLLoader();
         loader.setLocation(Main.class.getResource("/view/ChooseCustomer.fxml"));
         
-        BorderPane chooseCustomer = loader.load();
-        Stage dialog = new Stage();
-        dialog.setTitle("Ügyfél kiválasztás számlázáshoz");
-        dialog.initModality(Modality.WINDOW_MODAL);
-        dialog.initOwner(main.primaryStage);
-        Scene scene = new Scene(chooseCustomer);
-        dialog.setScene(scene);
-        dialog.initStyle(StageStyle.UNDECORATED);
-       
-        ((ChooseCustomerController)loader.getController()).setMain(main);
- 
-        dialog.showAndWait();
-        
+		try {
+		
+			BorderPane chooseCustomer = loader.load();
+	        Stage dialog = new Stage();
+	        dialog.setTitle("Ügyfél kiválasztás számlázáshoz");
+	        dialog.initModality(Modality.WINDOW_MODAL);
+	        dialog.initOwner(main.primaryStage);
+	        Scene scene = new Scene(chooseCustomer);
+	        dialog.setScene(scene);
+	        dialog.initStyle(StageStyle.UNDECORATED);
+	       
+	        ((ChooseCustomerController)loader.getController()).setMain(main);
+	 
+	        dialog.showAndWait();
+	        
+		} catch (IOException e) {
+			
+			logger.error("IO hiba Ügyfél Kiválasztás Nézet betöltés közben: " + e.getMessage());
+		
+		}        
     }
 	
 	@FXML
-	void pickCustomer() throws IOException {
+	void pickCustomer() {
 	
 		if (!main.isCartCustomerSelected()) {
 	        
@@ -177,7 +187,7 @@ public class InvoicingViewController {
 	}
 	
 	@FXML
-	void addToInvoice() throws IOException {
+	void addToInvoice() {
 	
 		if (main.isCartCustomerSelected()) {
 		
@@ -231,7 +241,7 @@ public class InvoicingViewController {
 	
 			} else {
 				
-				logger.info("Nincs kivalasztva termek");
+				logger.info("Nincs kiválasztva termék");
 				
 			}
 			

@@ -65,7 +65,7 @@ public class Main extends Application {
      * @param primaryStage kijelöli az elsődleges színpadot a JavaFX indításához
      */
     @Override
-	public void start(Stage primaryStage) throws Exception {
+	public void start(Stage primaryStage) {
         this.primaryStage = primaryStage;
         primaryStage.setTitle("WareHouse Management V1.0");
 		showMainView();

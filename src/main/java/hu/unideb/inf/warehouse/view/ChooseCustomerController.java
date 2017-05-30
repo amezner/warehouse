@@ -63,6 +63,9 @@ public class ChooseCustomerController {
 	@FXML 
 	private Button chooseButton;
 
+    /**
+     * JavaFX elemek inicializálását végző metódus.
+     */
 	@FXML
 	void initialize() {
 

@@ -85,7 +85,6 @@ public class InvoiceHandler {
 	
 	}
 	
-	
 	/**
 	 * Visszaadja a soron következő számlaszámot a paraméterben megkapott számla adatbázisból.
 	 *  

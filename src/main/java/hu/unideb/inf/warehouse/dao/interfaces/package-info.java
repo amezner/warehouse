@@ -1,4 +1,6 @@
 /**
+ * DAO interfész csomag. Jelenleg csak a Finalizer osztályhoz készült interfész. 
+ * 
  * @author amezner
  *
  */

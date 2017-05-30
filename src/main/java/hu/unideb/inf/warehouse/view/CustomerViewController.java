@@ -60,6 +60,9 @@ public class CustomerViewController {
 	@FXML
 	private TableColumn<Customer, Integer> customerDiscountColumn;
 
+    /**
+     * JavaFX elemek inicializálását végző metódus.
+     */
     @FXML
     void initialize() {
     	
@@ -86,65 +89,82 @@ public class CustomerViewController {
     
     }
 
+   
 	@FXML
-	void addNewCustomerAction() throws IOException {
+	void addNewCustomerAction() {
 		
+        logger.info("Új Ügyfél Hozzáadás Nézet betöltése.");
+
 		Customer customer = new Customer("", "", "", "", "", "", "", "", "", 0);
 
 		logger.info("Új ügyfél hozzáadása nézet betöltése.");
         
 		FXMLLoader loader = new FXMLLoader();
         loader.setLocation(Main.class.getResource("/view/EditCustomer.fxml"));
-        BorderPane addNewCustomer = loader.load();
-        
-        Stage addDialogStage = new Stage();
-        addDialogStage.setTitle("Új Ügyfél Felvétele");
-        addDialogStage.initModality(Modality.WINDOW_MODAL);
-        addDialogStage.initOwner(main.primaryStage);
-        Scene scene = new Scene(addNewCustomer);
-        addDialogStage.setScene(scene);
-        ((EditCustomerController)loader.getController()).setCustomer(customer);
-        addDialogStage.showAndWait();
-    	
-        if (!customer.getCustomerID().isEmpty())
-        	if (!main.getCustomers().stream().anyMatch(c -> c.getCustomerID().equals(customer.getCustomerID())))
-        		main.getCustomers().add(customer);
-        	else {
-				logger.warn("Van már ilyen ügyfél!");
-				
-				Alert alert = new Alert(AlertType.WARNING);
-				alert.setTitle("Ügyfél azonsító HIBA");
-				alert.setHeaderText(null);
-				alert.setContentText("Ezzel az ügyfél azonosítóval már létezik ügyfél ezért nem vettük fel!");
-				alert.showAndWait();
-        	}
+		try {
 
+			BorderPane addNewCustomer = loader.load();
+	        Stage addDialogStage = new Stage();
+	        addDialogStage.setTitle("Új Ügyfél Felvétele");
+	        addDialogStage.initModality(Modality.WINDOW_MODAL);
+	        addDialogStage.initOwner(main.primaryStage);
+	        Scene scene = new Scene(addNewCustomer);
+	        addDialogStage.setScene(scene);
+	        ((EditCustomerController)loader.getController()).setCustomer(customer);
+	        addDialogStage.showAndWait();
+	    	
+	        if (!customer.getCustomerID().isEmpty()) {
+	        	if (!main.getCustomers().stream().anyMatch(c -> c.getCustomerID().equals(customer.getCustomerID())))
+	        		main.getCustomers().add(customer);
+	        	else {
+					logger.warn("Van már ilyen ügyfél!");
+					
+					Alert alert = new Alert(AlertType.WARNING);
+					alert.setTitle("Ügyfél azonsító HIBA");
+					alert.setHeaderText(null);
+					alert.setContentText("Ezzel az ügyfél azonosítóval már létezik ügyfél ezért nem vettük fel!");
+					alert.showAndWait();
+	        	}
+	        }
+		} catch (IOException e) {
+			
+			logger.error("IO hiba Új Ügyfél Hozzáadás Nézet betöltés közben: " + e.getMessage());
+			
+		}
+        
 	}
 
 	@FXML
-	void editCustomerAction() throws IOException {
+	void editCustomerAction() {
         
-		logger.info("Meglévő ügyfél szerkesztése nézet betöltése.");
+		logger.info("Meglévő Ügyfél Szerkesztése Nézet betöltése.");
         
 		FXMLLoader loader = new FXMLLoader();
         loader.setLocation(Main.class.getResource("/view/EditCustomer.fxml"));
-        BorderPane editCustomer = loader.load();
-        
-        Stage addDialogStage = new Stage();
-        addDialogStage.setTitle("Ügyfél szerkesztése");
-        addDialogStage.initModality(Modality.WINDOW_MODAL);
-        addDialogStage.initOwner(main.primaryStage);
-        Scene scene = new Scene(editCustomer);
-        addDialogStage.setScene(scene);
-        ((EditCustomerController)loader.getController()).setCustomer(customerTable.getItems().get(customerTable.getSelectionModel().getSelectedIndex()));
+		try {
+			BorderPane editCustomer = loader.load();
+	        Stage addDialogStage = new Stage();
+	        addDialogStage.setTitle("Ügyfél szerkesztése");
+	        addDialogStage.initModality(Modality.WINDOW_MODAL);
+	        addDialogStage.initOwner(main.primaryStage);
+	        Scene scene = new Scene(editCustomer);
+	        addDialogStage.setScene(scene);
+	        ((EditCustomerController)loader.getController()).setCustomer(customerTable.getItems().get(customerTable.getSelectionModel().getSelectedIndex()));
 
-        addDialogStage.showAndWait();    
+	        addDialogStage.showAndWait();    
+		} catch (IOException e) {
+			
+			logger.error("IO hiba Ügyfél Szerkesztés Nézet betöltés közben: " + e.getMessage());
+			
+		}
         
 	}
 	
 	@FXML
-	void deleteCustomerAction() throws IOException {
+	void deleteCustomerAction() {
 		
+        logger.info("Ügyfél törlése.");
+
 		customerTable.getItems().remove(customerTable.getSelectionModel().getSelectedIndex());
 	
 	}

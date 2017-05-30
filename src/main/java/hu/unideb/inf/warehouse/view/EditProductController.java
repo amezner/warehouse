@@ -45,6 +45,9 @@ public class EditProductController {
 	@FXML
 	private Button saveButton;
 	
+    /**
+     * JavaFX elemek inicializálását végző metódus.
+     */
 	@FXML
 	void handleCancelButtonAction() {
 	    Stage stage = (Stage) cancelButton.getScene().getWindow();

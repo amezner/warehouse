@@ -63,6 +63,9 @@ public class EditCustomerController {
 	    stage.close();
 	}
 	
+    /**
+     * JavaFX elemek inicializálását végző metódus.
+     */
 	@FXML
 	void initialize(){
 		customerLoyaltyBox.setValue("Alap");

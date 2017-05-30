@@ -1,7 +1,5 @@
 package hu.unideb.inf.warehouse.view;
 
-import java.io.IOException;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -44,6 +42,9 @@ public class InvoicesViewController {
 	@FXML
 	private TableColumn<Invoice, String> invoiceDateColumn;
 
+    /**
+     * JavaFX elemek inicializálását végző metódus.
+     */
 	@FXML
 	void initialize() {
 
@@ -54,7 +55,7 @@ public class InvoicesViewController {
 	}
 
 	@FXML
-	void viewInvoice() throws IOException {
+	void viewInvoice() {
 		
 		if (invoiceTable.getSelectionModel().getSelectedIndex() >= 0) {
 		  Invoice invoice = invoiceTable.getItems().get(invoiceTable.getSelectionModel().getSelectedIndex());
