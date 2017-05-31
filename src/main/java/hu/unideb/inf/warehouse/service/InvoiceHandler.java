@@ -92,8 +92,7 @@ public class InvoiceHandler {
 	 * @return következő számlaszám
 	 */
 	public static String generateNextInvoiceNumber(ObservableList<Invoice> invoices) {
-		String invoiceNumber = invoices.get(invoices.size()-1).getInvoiceNumber();
-		invoices.sorted(Comparator.comparing(Invoice::getInvoiceNumber));
+		String invoiceNumber = invoices.sorted(Comparator.comparing(Invoice::getInvoiceNumber)).get(invoices.size()-1).getInvoiceNumber();
 		int nextNumber = Integer.parseInt(invoiceNumber.substring(invoiceNumber.length()-5));
 		nextNumber++;
 		invoiceNumber = "INV" + String.format("%05d", nextNumber);

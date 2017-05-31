@@ -5,13 +5,15 @@
 
 	<groupId>hu.unideb.inf</groupId>
 	<artifactId>warehouse</artifactId>
+	<packaging>jar</packaging>
 	<version>1.0</version>
 	<name>Warehouse Management</name>
 	<description>Raktárkezelő program - ProgTech/ProgKörny Beadandó - NXZ10S</description>
 	<url>https://github.com/amezner/warehouse</url>
-
+    <inceptionYear>2017</inceptionYear>
+    
 	<scm>
-		<connection>scm:git:https://github.com/amezner/warehouse.git</connection>
+		<connection>scm:git:git@github.com/amezner/warehouse.git</connection>
 		<developerConnection>scm:git:git@github.com:amezner/warehouse.git</developerConnection>
 		<url>https://github.com/amezner/warehouse</url>
 	</scm>
@@ -45,6 +47,7 @@
 			<id>github</id>
 			<name>GitHUB repository</name>
 			<url>https://github.com/amezner/warehouse</url>
+			<layout>default</layout>
 		</repository>
 	</distributionManagement>
 
