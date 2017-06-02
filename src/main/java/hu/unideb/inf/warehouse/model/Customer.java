@@ -68,55 +68,70 @@ public class Customer {
 	}
 
 	/**
-	 * @return the customerID as a string 
+	 * Visszaadja az ügyfélazonosítót.
+	 * 
+	 * @return ügyfélazonosító
 	 */
 	public String getCustomerID() {
 		return customerID.get();
 	}
 
 	/**
-	 * @return the customerID as a property
+	 * Visszaadja az ügyfélazonosítót JavaFX felülethez.
+	 * 
+	 * @return ügyfélazonosító
 	 */
 	public StringProperty getCustomerIDProperty() {
 		return customerID;
 	}
 
 	/**
-	 * @param customerID the customerID to set
+	 * Beállítja az ügyfélazonosítót.
+	 * 
+	 * @param customerID beállítandó ügyfélazonosító
 	 */
 	public void setCustomerID(String customerID) {
 		this.customerID.set(customerID);
 	}
 
 	/**
-	 * @return the customerName as a string
+	 * Visszaadja az ügyfél nevét.
+	 * @return ügyfél neve
 	 */
 	public String getCustomerName() {
 		return customerName.get();
 	}
 	
 	/**
-	 * @return the customerName as a property
+	 * Visszaadja az ügyfél nevét JavaFX felülethez.
+	 * 
+	 * @return ügyfélnév
 	 */
 	public StringProperty getCustomerNameProperty() {
 		return customerName;
 	}
 
 	/**
-	 * @param customerName the customerName to set
+	 * Beállítja az ügyfél nevét.
+	 * 
+	 * @param customerName beállítandó ügyfélnév.
 	 */
 	public void setCustomerName(String customerName) {
 		this.customerName.set(customerName);
 	}
 
 	/**
-	 * @return the customerAddress as a string
+	 * Visszaadja a ügyfél címét.
+	 * 
+	 * @return ügyfél cím
 	 */
 	public String getCustomerAddress() {
 		return customerAddress.get();
 	}
 	
 	/**
+	 * Visszaadja az ügyfél címét JavaFX alkalmazáshoz.
+	 * 
 	 * @return the customerAddress as a property
 	 */
 	public StringProperty getCustomerAddressProperty() {
@@ -124,160 +139,205 @@ public class Customer {
 	}
 
 	/**
-	 * @param customerAddress the customerAddress to set
+	 * Beállítja az ügyfél címét.
+	 * 
+	 * @param customerAddress beállítandó ügyfél címe
 	 */
 	public void setCustomerAddress(String customerAddress) {
 		this.customerAddress.set(customerAddress);
 	}
 
 	/**
-	 * @return the customerCity as a string
+	 * Visszaadja az ügyfél városát.
+	 * 
+	 * @return ügyfél városa
 	 */
 	public String getCustomerCity() {
 		return customerCity.get();
 	}
 	
 	/**
-	 * @return the customerCity as a property
+	 * Visszaadja az ügyfél városát JavaFX alkalmazáshoz.
+	 * 
+	 * @return ügyfél városa
 	 */
 	public StringProperty getCustomerCityProperty() {
 		return customerCity;
 	}
 
 	/**
-	 * @param customerCity the customerCity to set
+	 * Beállítja az ügyfél városát.
+	 * 
+	 * @param customerCity beállítandó ügyfél városa
 	 */
 	public void setCustomerCity(String customerCity) {
 		this.customerCity.set(customerCity);
 	}
 	
 	/**
-	 * @return the customerPostCode as a string
+	 * Visszaadja az ügyfél irányítószámát.
+	 * 
+	 * @return ügyfél irányítószáma
 	 */
 	public String getCustomerPostCode() {
 		return customerPostCode.get();
 	}
 	
 	/**
-	 * @return the customerPostCode as a property
+	 * Visszaadja az ügyfél irányítószámát JavaFX alkalmazéshoz.
+	 * 
+	 * @return ügyfél irányítószáma
 	 */
 	public StringProperty getCustomerPostCodeProperty() {
 		return customerPostCode;
 	}
 
 	/**
-	 * @param customerPostCode the customerPostCode to set
+	 * Beállítja az ügyfél irányítószámát. 
+	 * 
+	 * @param customerPostCode beállítndó ügyfél irányítószáma
 	 */
 	public void setCustomerPostCode(String customerPostCode) {
 		this.customerPostCode.set(customerPostCode);
 	}
 
 	/**
-	 * @return the customerCountry as a string
+	 * Visszaadja az ügyfél országát.
+	 * 
+	 * @return ügyfél országa
 	 */
 	public String getCustomerCountry() {
 		return customerCountry.get();
 	}
 	
 	/**
-	 * @return the customerCountry as a property
+	 * Visszaadja az ügyfél országát JavaFX alkalmazáshoz.
+
+	 * @return ügyfél országa
 	 */
 	public StringProperty getCustomerCountryProperty() {
 		return customerCountry;
 	}
 
 	/**
-	 * @param customerCountry the customerCountry to set
+	 * Beállítja az ügyfél országát.
+	 * 
+	 * @param customerCountry beállítandó ügyfél országa
 	 */
 	public void setCustomerCountry(String customerCountry) {
 		this.customerCountry.set(customerCountry);
 	}
 
 	/**
-	 * @return the customerEmail as a string
+	 * Visszadja az ügyfél email címét.
+	 * 
+	 * @return ügyfél email címe
 	 */
 	public String getCustomerEmail() {
 		return customerEmail.get();
 	}
 	
 	/**
-	 * @return the customerEmail as a property
+	 * Visszadja az ügyfél email címét JavaFX alkalmazáshoz.
+	 * 
+	 * @return ügyfél email címe
 	 */
 	public StringProperty getCustomerEmailProperty() {
 		return customerEmail;
 	}
 
 	/**
-	 * @param customerEmail the customerEmail to set
+	 * Beállítja az ügyfél email címét.
+	 * 
+	 * @param customerEmail beállítandó ügyfel email címe
 	 */
 	public void setCustomerEmail(String customerEmail) {
 		this.customerEmail.set(customerEmail);
 	}
 
 	/**
-	 * @return the customerPhone as a string
+	 * Visszaadja az ügyfél telefonszámát.
+	 * 
+	 * @return ügyfél telefonszáma
 	 */
 	public String getCustomerPhone() {
 		return customerPhone.get();
 	}
 	
 	/**
-	 * @return the customerPhone as a property
+	 * Visszaadja az ügyfél telefonszámát JavaFX alkalmazáshoz.
+	 * 
+	 * @return ügyfél telefonszáma
 	 */
 	public StringProperty getCustomerPhoneProperty() {
 		return customerPhone;
 	}
 
 	/**
-	 * @param customerPhone the customerPhone to set
+	 * Beállítja az ügyfél telefonszámát.
+	 * 
+	 * @param customerPhone beállítandó telefonszám
 	 */
 	public void setCustomerPhone(String customerPhone) {
 		this.customerPhone.set(customerPhone);
 	}
 	
 	/**
-	 * @return the customerLoyalty as a string
+	 * Visszaadja az ügyfél tagsági szintjét. 
+	 * 
+	 * @return tagsági szint
 	 */
 	public String getCustomerLoyalty() {
 		return customerLoyalty.get();
 	}
 	
 	/**
-	 * @return the customerLoyalty as a property
+	 * Visszaadja az ügyfél tagsági szintjét JavaFX alkalmazáshoz.
+	 * 
+	 * @return tagsági szint
 	 */
 	public StringProperty getCustomerLoyaltyProperty() {
 		return customerLoyalty;
 	}
 
 	/**
-	 * @param customerLoyalty the customerLoyalty to set
+	 * Beállítja az ügyfél tagsági szintjét. 
+	 * @param customerLoyalty beállítandó tagsági szint
 	 */
 	public void setCustomerLoyalty(String customerLoyalty) {
 		this.customerLoyalty.set(customerLoyalty);
 	}
 
 	/**
-	 * @return the customerDiscount as an integer value
+	 * Visszaadja az ügyfélre érvényes kedvezmény mértékét.
+	 * 
+	 * @return kedvezmény mértéke
 	 */
 	public Integer getCustomerDiscount() {
 		return customerDiscount.get();
 	}
 	
 	/**
-	 * @return the customerDiscount
+	 * Beállítja az ügyfélre érvényes kedvezmény mértékét JavaFX alkalmazáshoz.
+	 * 
+	 * @return kedvezmény mértéke
 	 */
 	public IntegerProperty getCustomerDiscountProperty() {
 		return customerDiscount;
 	}
 
 	/**
-	 * @param customerDiscount the customerDiscount to set
+	 * Beállítja az ügyfélre érvényes kedvezmény mértékét.
+	 * 
+	 * @param customerDiscount beállítandő kedvezmény mértéke
 	 */
 	public void setCustomerDiscount(Integer customerDiscount) {
 		this.customerDiscount.set(customerDiscount);
 	}
     
 	/**
+	 * A metódus az ügyfél teljes címét adja vissza leegyszerűsítendő az adatkezelést.
+	 * 
 	 * @return vevő teljes címe
 	 */
 	public String getCustomerFullAddress() {

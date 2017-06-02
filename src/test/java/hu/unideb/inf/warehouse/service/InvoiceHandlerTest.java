@@ -21,7 +21,7 @@ public class InvoiceHandlerTest {
 	private ObservableList<Invoice> testInvoices = FXCollections.observableArrayList();
 	
 	@Before
-	public void setUp() throws Exception {
+	public void setUp() {
 		
 		testCustomer = new Customer( "CUS0001", 
 									 "Test Buyer", 

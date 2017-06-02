@@ -25,7 +25,7 @@ public class DiscountServiceTest {
 	private SoldProduct soldProduct4;
 	
 	@Before
-	public void setUp() throws Exception {
+	public void setUp() {
     	
 		cart = FXCollections.observableArrayList();
 		

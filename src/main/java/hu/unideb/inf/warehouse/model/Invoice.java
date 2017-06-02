@@ -47,91 +47,115 @@ public class Invoice {
 	
 
 	/**
-	 * @return the invoiceNumber as a string 
+	 * Visszaadja a számlaszámot. 
+	 * 
+	 * @return számlaszám 
 	 */
 	public String getInvoiceNumber() {
 		return invoiceNumber.get();
 	}
 
 	/**
-	 * @return the invoiceNumber as a property
+	 * Visszaadja a számlaszámot JavaFX alkalmazáshoz.
+	 * @return számlaszám
 	 */
 	public StringProperty getInvoiceNumberProperty() {
 		return invoiceNumber;
 	}
 
 	/**
-	 * @param invoiceNumber the invoiceNumber to set
+	 * Beállítja a számlaszámot.
+	 * 
+	 * @param invoiceNumber számlaszám
 	 */
 	public void setInvoiceNumber(String invoiceNumber) {
 		this.invoiceNumber.set(invoiceNumber);
 	}
 	
 	/**
-	 * @return the invoiceDate as a string 
+	 * Visszaadja a számla kiállításának a dátumát 
+	 * 
+	 * @return számla kiállításának a dátuma 
 	 */
 	public String getInvoiceDate() {
 		return invoiceDate.get();
 	}
 
 	/**
-	 * @return the invoiceDate as a property
+	 * Visszaadja a számla kiállításának a dátumát JavaFX alkalmazáshoz.
+	 * @return számla kiállításának a dátuma
 	 */
 	public StringProperty getInvoiceDateProperty() {
 		return invoiceDate;
 	}
 
 	/**
-	 * @param invoiceDate the invoiceDate to set
+	 * Beállítja a számlaszámot.
+	 * 
+	 * @param invoiceDate számla kiállításának a dátuma
 	 */
 	public void setInvoiceDate(String invoiceDate) {
 		this.invoiceDate.set(invoiceDate);
 	}
 	
 	/**
-	 * @return the invoiceDiscount as an integer value
+	 * Visszaadja a számlázásnál alkalmazott mennyiségi kedvezmény mértékét. 
+	 * 
+	 * @return az alkalmazott mennyiségi kedvezmény mértéke
 	 */
 	public Integer getInvoiceDiscount() {
 		return invoiceDiscount.get();
 	}
 	
 	/**
-	 * @return the invoiceDiscount
+	 * Visszaadja a számlázásnál alkalmazott mennyiségi kedvezmény mértékét JavaFX alkalmazáshoz.
+	 * 
+	 * @return az alkalmazott mennyiségi kedvezmény mértéke
 	 */
 	public IntegerProperty getInvoiceDiscountProperty() {
 		return invoiceDiscount;
 	}
 
 	/**
-	 * @param invoiceDiscount the invoiceDiscount to set
+	 * Beállítja a számlázásnál alkalmazott mennyiségi kedvezmény mértéke.
+	 * 
+	 * @param invoiceDiscount az alkalmazandő mennyiségi kedvezmény
 	 */
 	public void setInvoiceDiscount(Integer invoiceDiscount) {
 		this.invoiceDiscount.set(invoiceDiscount);
 	}
 	
 	/**
-	 * @return the customer
+	 * Visszaadja a vevőt.
+	 * 
+	 * @return vevő
 	 */
 	public Customer getCustomer() {
 		return customer;
 	}
 	
 	/**
-	 * @param customer the customer to set
+	 * Beállítja a vevőt.
+	 * 
+	 * @param customer vevő
 	 */
 	public void setCustomer(Customer customer) {
 		this.customer = customer;
 	}
 	
 	/**
-	 * @return the soldProducts
+	 * Visszaadja az eladott termékeket.
+	 * 
+	 * @return soldProducts az eladott termékek listája
 	 */
 	public ObservableList<SoldProduct> getSoldProducts() {
 		return soldProducts;
 	}
 	
 	/**
-	 * @param soldProducts the soldProducts to set
+	 * Beállítja az eladott termékeket.
+	 * 
+	 * @param soldProducts az eladott termékek listája
 	 */
 	public void setSoldProducts(ObservableList<SoldProduct> soldProducts) {
 		this.soldProducts = soldProducts;

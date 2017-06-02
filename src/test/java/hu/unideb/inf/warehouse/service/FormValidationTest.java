@@ -16,7 +16,7 @@ public class FormValidationTest {
 	private Customer testCustomer2;
 
 	@Before
-	public void setUp() throws Exception {
+	public void setUp() {
 
 		// Minden paraméter megfelelő
 		testProduct1 = new Product("TE00001", "TESTProduct1", "TestTYPE", 100, 105, 50, "Description");

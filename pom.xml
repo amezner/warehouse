@@ -3,7 +3,6 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<groupId>hu.unideb.inf</groupId>
 	<artifactId>warehouse</artifactId>
 	<packaging>jar</packaging>
 	<version>1.0</version>
@@ -14,7 +13,7 @@
     
 	<scm>
 		<connection>scm:git:git@github.com/amezner/warehouse.git</connection>
-		<developerConnection>scm:git:git@github.com:amezner/warehouse.git</developerConnection>
+		<developerConnection>scm:git:ssh://github.com:amezner/warehouse.git</developerConnection>
 		<url>https://github.com/amezner/warehouse</url>
 	</scm>
 
@@ -39,15 +38,14 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.build.outputEncoding>UTF-8</project.build.outputEncoding>
 		<mainClass>hu.unideb.inf.warehouse.Main</mainClass>
-		<github.global.server>github</github.global.server>
+		<github.global.server>myrepo</github.global.server>
 	</properties>
 
 	<distributionManagement>
 		<repository>
-			<id>github</id>
+			<id>myrepo</id>
 			<name>GitHUB repository</name>
 			<url>https://github.com/amezner/warehouse</url>
-			<layout>default</layout>
 		</repository>
 	</distributionManagement>
 
@@ -175,4 +173,5 @@
 		</plugins>
 	</reporting>
 
+	<groupId>hu.unideb.inf</groupId>
 </project>
