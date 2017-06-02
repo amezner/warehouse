@@ -55,126 +55,156 @@ public class SoldProduct {
     }
 
 	/**
-	 * @return the soldProductID as a string 
+	 * Visszaadja az eladott termék azonosítóját.
+	 * 
+	 * @return termék azonsítója
 	 */
 	public String getSoldProductID() {
 		return soldProductID.get();
 	}
 
 	/**
-	 * @return the soldProductID as a property
+	 * Visszaadja az eladott termék azonosítóját JavaFX alkalmazáshoz.
+	 * 
+	 * @return az eladott termék azonosítója
 	 */
 	public StringProperty getSoldProductIDProperty() {
 		return soldProductID;
 	}
 
 	/**
-	 * @param soldProductID the soldProductID to set
+	 * Beállítja az eladott termék azonosítáját.
+	 * 
+	 * @param soldProductID az eladott termék azonosítója
 	 */
 	public void setSoldProductID(String soldProductID) {
 		this.soldProductID.set(soldProductID);
 	}
 
 	/**
-	 * @return the soldProductName as a string
+	 * Visszaadja az eladott termék nevét.
+	 * 
+	 * @return az eladátt termék neve
 	 */
 	public String getSoldProductName() {
 		return soldProductName.get();
 	}
 	
 	/**
-	 * @return the soldProductName as a property
+	 * Visszaadja az eladott termék nevét JavaFX alklamazáshoz.
+	 * 
+	 * @return az eladátt termék neve
 	 */
 	public StringProperty getSoldProductNameProperty() {
 		return soldProductName;
 	}
 
 	/**
-	 * @param soldProductName the soldProductName to set
+	 * Beállítja az eladott termék nevét.
+	 * 
+	 * @param soldProductName az eladott termék neve
 	 */
 	public void setSoldProductName(String soldProductName) {
 		this.soldProductName.set(soldProductName);
 	}
 
 	/**
-	 * @return the soldProductType as a string
+	 * Visszaadja az eladott termék típusát.
+	 * 
+	 * @return az eladott termék típusa
 	 */
 	public String getSoldProductType() {
 		return soldProductType.get();
 	}
 	
 	/**
-	 * @return the soldProductType as a property
+	 * Visszaadja az eladott termék típusát JavaFX alkalmazáshoz.
+	 * @return az eladott termék típusa
 	 */
 	public StringProperty getSoldProductTypeProperty() {
 		return soldProductType;
 	}
 
 	/**
-	 * @param soldProductType the soldProductType to set
+	 * Beállítja az eladott termék típusát.
+	 * @param soldProductType eladott termék típusa
 	 */
 	public void setSoldProductType(String soldProductType) {
 		this.soldProductType.set(soldProductType);
 	}
 
 	/**
-	 * @return the soldProductSoldPrice as an Double value
+	 * Visszaadja az eladott termékhez tartozó eladási árat.
+	 * 
+	 * @return az eladott termékhez tartozó eladási ár
 	 */
 	public Double getSoldProductSoldPrice() {
 		return soldProductSoldPrice.get();
 	}
 	
 	/**
-	 * @return the soldProductSoldPrice
+	 * Visszaadja az eladott termékhez tartozó eladási árat a JavaFX alkalmazáshoz.
+	 * @return az eladott termékhez tartozó eladási ár
 	 */
 	public SimpleDoubleProperty getSoldProductSoldPriceProperty() {
 		return soldProductSoldPrice;
 	}
 
 	/**
-	 * @param soldProductSoldPrice the soldProductSoldPrice to set
+	 * Beállítja az eladott termékhez tartozó eladási árat.
+	 * 
+	 * @param soldProductSoldPrice az eladott termékhez tartozó eladási ár
 	 */
 	public void setSoldProductSoldPrice(Double soldProductSoldPrice) {
 		this.soldProductSoldPrice.set(soldProductSoldPrice);
 	}
  
 	/**
-	 * @return the soldProductSoldQuantity as an integer value
+	 * Visszaadja az eladott termékhez tartozó darabszámot.
+	 * 
+	 * @return az eladott termékhez tartozó darabszáma
 	 */
 	public Integer getSoldProductSoldQuantity() {
 		return soldProductSoldQuantity.get();
 	}
 	
 	/**
-	 * @return the soldProductSoldQuantity
+	 * Visszaadja az eladott termékhez tartozó darabszámot JavaFX alkalmazáshoz.
+	 * @return az eladott termékhez tartozó darabszáma
 	 */
 	public SimpleIntegerProperty getSoldProductSoldQuantityProperty() {
 		return soldProductSoldQuantity;
 	}
 
 	/**
-	 * @param soldProductSoldQuantity the soldProductSoldQuantity to set
+	 * Beállítja az eladott termékhez tartozó darabszámot.
+	 * 
+	 * @param soldProductSoldQuantity az eladott termékhez tartozó darabszáma
 	 */
 	public void setSoldProductSoldQuantity(Integer soldProductSoldQuantity) {
 		this.soldProductSoldQuantity.set(soldProductSoldQuantity);
 	}
 	
 	/**
-	 * @return the soldProductSubTotal as an Double value
+	 * Visszaadja az eladott termékhez tartozó részösszeget.
+	 * 
+	 * @return eladott termék részösszege
 	 */
 	public Double getSoldProductSubTotal() {
 		return soldProductSubTotal.get();
 	}
 	
 	/**
-	 * @return the soldProductSubTotal
+	 * Visszaadja az eladott termékhez tartozó részösszeget a JavFX alkalmazáshoz.
+	 * @return eladott termék részösszege
 	 */
 	public SimpleDoubleProperty getSoldProductSubTotalProperty() {
 		return soldProductSubTotal;
 	}
 
 	/**
-	 * @param soldProductSubTotal the soldProductSubTotal to set
+	 * Beállítja az eladott termékhez tartozó részösszeget.
+	 * @param soldProductSubTotal eladott termékek részösszege
 	 */
 	public void setSoldProductSubTotal(Double soldProductSubTotal) {
 		this.soldProductSubTotal.set(soldProductSubTotal);

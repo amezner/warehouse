@@ -59,147 +59,188 @@ public class Product {
     }
 
 	/**
-	 * @return the productID as a string 
+	 * Visszaadja a raktáron levő termék azonosítóját.
+	 * 
+	 * @return a raktáron levő  termék azonosítója
 	 */
 	public String getProductID() {
 		return productID.get();
 	}
 
 	/**
-	 * @return the productID as a property
+	 * Visszaadja a raktáron levő termék azonosítóját JavaFX alkalmazáshoz.
+	 * 
+	 * @return a raktáron levő  termék azonosítója
 	 */
 	public StringProperty getProductIDProperty() {
 		return productID;
 	}
 
 	/**
-	 * @param productID the productID to set
+	 * Beállítja a raktáron levő termék azonosítóját.
+	 * 
+	 * @param productID a raktáron levő termék azonosítója
 	 */
 	public void setProductID(String productID) {
 		this.productID.set(productID);
 	}
 
 	/**
-	 * @return the productName as a string
+	 * Visszaadja a raktáron levő termék nevét.
+	 * 
+	 * @return a raktáron levő termék neve
 	 */
 	public String getProductName() {
 		return productName.get();
 	}
 	
 	/**
-	 * @return the productName as a property
+	 * Visszaadja a raktáron levő termék nevét JavaFX alkalmazáshoz.
+	 * 
+	 * @return a raktáron levő termék neve
 	 */
 	public StringProperty getProductNameProperty() {
 		return productName;
 	}
 
 	/**
-	 * @param productName the productName to set
+	 * Beállítja a raktáron levő termék nevét.
+	 * @param productName a raktáron levő termék neve
 	 */
 	public void setProductName(String productName) {
 		this.productName.set(productName);
 	}
 
 	/**
-	 * @return the productType as a string
+	 * Visszaadja a raktáron levő termék típusát.
+	 * 
+	 * @return a raktáron levő termék típusa
 	 */
 	public String getProductType() {
 		return productType.get();
 	}
 	
 	/**
-	 * @return the productType as a property
+	 * Visszaadja a raktáron levő termék típusát JavaFX alkalmazáshoz.
+	 * 
+	 * @return a raktáron levő termék típusa
 	 */
 	public StringProperty getProductTypeProperty() {
 		return productType;
 	}
 
 	/**
-	 * @param productType the productType to set
+	 * Beállítja a raktáron levő termék típusát.
+	 * 
+	 * @param productType a raktáron levő termék típusat
 	 */
 	public void setProductType(String productType) {
 		this.productType.set(productType);
 	}
 
 	/**
-	 * @return the productPurchasePrice as an integer value
+	 * Visszaadja a raktáron levő termék eladási árát.
+	 * 
+	 * @return a raktáron levő termék beszerzési ára
 	 */
 	public Integer getProductPurchasePrice() {
 		return productPurchasePrice.get();
 	}
 	
 	/**
-	 * @return the productPurchasePrice
+	 * Visszaadja a raktáron levő termék beszerzési árát JavaFX alkalmazáshoz.
+	 * 
+	 * @return a raktáron levő termék beszerzési ára
 	 */
 	public IntegerProperty getProductPurchasePriceProperty() {
 		return productPurchasePrice;
 	}
 
 	/**
-	 * @param productPurchasePrice the productPurchasePrice to set
+	 * Beállítja a raktáron levő termék beszerzési árát.
+	 * 
+	 * @param productPurchasePrice a raktáron levő termék beszerzési ára
 	 */
 	public void setProductPurchasePrice(Integer productPurchasePrice) {
 		this.productPurchasePrice.set(productPurchasePrice);
 	}
  
 	/**
-	 * @return the productSellingPrice as an integer value
+	 * Visszaadja a raktáron levő termék eladási árát.
+	 * 
+	 * @return a raktáron levő termék eladási ára
 	 */
 	public Integer getProductSellingPrice() {
 		return productSellingPrice.get();
 	}
 	
 	/**
-	 * @return the productSellingPrice
+	 * Visszaadja a raktáron levő termék eladási árát JavaFX alkalmazáshoz.
+	 * 
+	 * @return a raktáron levő termék eladási ára
 	 */
 	public IntegerProperty getProductSellingPriceProperty() {
 		return productSellingPrice;
 	}
 
 	/**
-	 * @param productSellingPrice the productSellingPrice to set
-	 */
+	 * Beállítja a raktáron levő termék eladási árát.
+	 * 
+	 * @param productSellingPrice a raktáron levő termék eladási ára	 
+	*/
 	public void setProductSellingPrice(Integer productSellingPrice) {
 		this.productSellingPrice.set(productSellingPrice);
 	}
 	
 	/**
-	 * @return the productOnStock as an integer value
+	 * Visszaadja a raktáron levő termék mennyiségét.
+	 * 
+	 * @return a raktáron levő termék mennyisége
 	 */
 	public Integer getProductOnStock() {
 		return productOnStock.get();
 	}
 	
 	/**
-	 * @return the productOnStock
+	 * Visszaadja a raktáron levő termék mennyiségét JavaFX alkalmazáshoz.
+	 * 
+	 * @return a raktáron levő termék mennyisége
 	 */
 	public IntegerProperty getProductOnStockProperty() {
 		return productOnStock;
 	}
 
 	/**
-	 * @param productOnStock the productOnStock to set
+	 * Beállítja a raktáron levő termék mennyiségét.
+	 * 
+	 * @param productOnStock a raktáron levő termék mennyisége
 	 */
 	public void setProductOnStock(Integer productOnStock) {
 		this.productOnStock.set(productOnStock);
 	}
 	
 	/**
-	 * @return the productDescription as a string 
+	 * Visszaadja a raktáron levő termék leírását.
+	 * 
+	 * @return a raktáron levő termék leírása 
 	 */
 	public String getProductDescription() {
 		return productDescription.get();
 	}
 
 	/**
-	 * @return the productDescription as a property
+	 * Visszaadja a raktáron levő termék leírását JavaFX alkalmazáshoz.
+	 * 
+	 * @return a raktáron levő termék leírása 
 	 */
 	public StringProperty getProductDescriptionProperty() {
 		return productDescription;
 	}
 
 	/**
-	 * @param productDescription the productDescription to set
+	 * Beállítja a raktáron levő termék leírását. 
+	 * 
+	 * @param productDescription a raktáron levő termék leírása
 	 */
 	public void setProductDescription(String productDescription) {
 		this.productDescription.set(productDescription);
