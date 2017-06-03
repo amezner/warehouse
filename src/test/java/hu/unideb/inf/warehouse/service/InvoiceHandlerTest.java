@@ -12,6 +12,13 @@ import hu.unideb.inf.warehouse.model.SoldProduct;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 
+/**
+ * Az InvoiceHandler osztály metódusainak a tesztelésére szolgáló osztály. 
+ * Jelenleg csak a generateNextInvoiceNumber metódust teszteli.
+ * 
+ * @author amezner
+ *
+ */
 public class InvoiceHandlerTest {
 
 	private Customer testCustomer;
@@ -20,6 +27,9 @@ public class InvoiceHandlerTest {
 	private ObservableList<SoldProduct> testSoldProducts = FXCollections.observableArrayList();
 	private ObservableList<Invoice> testInvoices = FXCollections.observableArrayList();
 	
+	/**
+	 * InvoiceHandler osztály metódusainak a tesztelése előtt beállítjuk a tesztelendő értékeket.
+	 */
 	@Before
 	public void setUp() {
 		
@@ -42,6 +52,10 @@ public class InvoiceHandlerTest {
 		testInvoices.add(testInvoice2);
 	}
 
+	/**
+	 * Azt teszteljük, hogy megfelelő-e a visszakapott számlaszám.
+	 * Szándékosan kisebb értéket ad hozzá másodikként, hogy a rendezést is teszteljük. 
+	 */
 	@Test
 	public void test() {
 		Assert.assertEquals("INV66667", InvoiceHandler.generateNextInvoiceNumber(testInvoices));

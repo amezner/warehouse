@@ -73,7 +73,7 @@ public class Invoice {
 	}
 	
 	/**
-	 * Visszaadja a számla kiállításának a dátumát 
+	 * Visszaadja a számla kiállításának a dátumát. 
 	 * 
 	 * @return számla kiállításának a dátuma 
 	 */

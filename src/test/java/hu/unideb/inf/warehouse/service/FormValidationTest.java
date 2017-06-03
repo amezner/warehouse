@@ -7,6 +7,13 @@ import hu.unideb.inf.warehouse.model.Customer;
 import hu.unideb.inf.warehouse.model.Product;
 import org.junit.Assert;
 
+/**
+ * A FormValidation osztály metódusainak a tesztelésére szolgáló osztály. Minden metódust letesztel,
+ * metódusonként pedig két tesztet hajt végre.
+ * 
+ * @author amezner
+ *
+ */
 public class FormValidationTest {
 
 	private Product testProduct1;
@@ -15,6 +22,9 @@ public class FormValidationTest {
 	private Customer testCustomer1;
 	private Customer testCustomer2;
 
+	/**
+	 * FormValidation osztály metódusainak a tesztelése előtt beállítjuk a tesztelendő értékeket.
+	 */
 	@Before
 	public void setUp() {
 
