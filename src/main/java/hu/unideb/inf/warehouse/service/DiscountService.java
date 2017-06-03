@@ -16,8 +16,10 @@ import javafx.collections.ObservableList;
  */
 public class DiscountService {
 
+    /**
+     * A naplózáshoz használt példány.
+     */
 	private static Logger logger = LoggerFactory.getLogger(DiscountService.class);
-	
 
 	/**
 	 * Profit kontrol céljából létrehozott metódus. Ez biztosítja, hogy nem értékesítünk veszteséggel.

@@ -26,7 +26,10 @@ import javafx.stage.FileChooser;
  */
 public class MainMenuController {
 
-    private static Logger logger = LoggerFactory.getLogger(MainMenuController.class);
+    /**
+     * A naplózáshoz használt példány.
+     */
+	private static Logger logger = LoggerFactory.getLogger(MainMenuController.class);
     
 	private Main main;
 
@@ -39,26 +42,44 @@ public class MainMenuController {
         this.main = main;
     }
     
+	/**
+	 * Ügyfélkezelés kiválasztó gomb eseményét kezeli. 
+	 */
 	@FXML
 	void goCustomerView() {
 		showCustomerView();
 	}
 	
+    
+	/**
+	 * Termék karbantartást kiválasztó gomb eseményét kezeli. 
+	 */
 	@FXML
 	void goProductView() {
 		showProductView();
 	}
 	
+    
+	/**
+	 * Számlázást kiválasztó gomb eseményét kezeli. 
+	 */
 	@FXML
 	void goInvoicingView() {
 		showInvoicingView();
 	}
 
+    
+	/**
+	 * Számlák megtekintését kiválasztó gomb eseményét kezeli. 
+	 */
 	@FXML
 	void goInvoicesView() {
 		showInvoicesView();
 	}
 	
+	/**
+	 * Mentés gomb eseményét kezeli. 
+	 */
 	@FXML
 	void goSaveEverything() {
 		Finalizer dao = new Finalizer();
@@ -67,6 +88,10 @@ public class MainMenuController {
 		dao.finalizeInvoices(main.getInvoices());
 	}
 
+    
+	/**
+	 * Inicializálást kiválasztó gomb eseményét kezeli. 
+	 */
 	@FXML
 	void goLoadEverything() {
 		main.setProducts(Loader.loadProducts("products.xml"));
@@ -74,6 +99,10 @@ public class MainMenuController {
 		main.setInvoices(Loader.loadInvoices("invoices.xml"));				
 	}
 	
+    
+	/**
+	 * Termékek betöltése gomb eseményét kezeli. 
+	 */	
 	@FXML
 	void goLoadProductXML() {
 		FileChooser fileChooser = new FileChooser();
@@ -109,6 +138,9 @@ public class MainMenuController {
 			logger.info("Nem választott file-t!");
 	}
 	
+	/**
+	 * Ügyfélek betöltése gomb eseményét kezeli. 
+	 */	
 	@FXML
 	void goLoadCustomerXML() {
 		FileChooser fileChooser = new FileChooser();
@@ -146,6 +178,9 @@ public class MainMenuController {
 			logger.info("Nem választott file-t!");
 	}
 	
+	/**
+	 * SZámlák megtekintése gomb eseményét kezeli. 
+	 */	
 	@FXML
 	void goLoadInvoicesXML() {
 		FileChooser fileChooser = new FileChooser();
@@ -167,7 +202,9 @@ public class MainMenuController {
 		}
 	}
 	
-	
+	/**
+	 * Számlázás nézetet betöltő metódus. 
+	 */	
 	void showInvoicingView() {
 	    logger.info("Számlázás nézet betöltése.");
 	    
@@ -187,6 +224,9 @@ public class MainMenuController {
 
 	}
 	
+	/**
+	 * Ügyfél karbantartás nézetet betöltő metódus. 
+	 */	
 	void showCustomerView() {
         logger.info("Ügyfél Karbantartás nézet betöltése.");
 
@@ -206,6 +246,9 @@ public class MainMenuController {
 
     }
 	
+	/**
+	 * Raktár karbantartás nézetet betöltő metódus. 
+	 */	
 	void showProductView() {
         logger.info("Raktár Karbantartás nézet betöltése.");
         
@@ -225,8 +268,11 @@ public class MainMenuController {
 
     }
 	
+	/**
+	 * Számlák megtekintése nézetet betöltő metódus. 
+	 */	
 	void showInvoicesView() {
-        logger.info("Számla Megtekintés nézet betöltése.");
+        logger.info("Számlák Megtekintés nézet betöltése.");
         
 		FXMLLoader loader = new FXMLLoader();
         loader.setLocation(Main.class.getResource("/view/InvoicesView.fxml"));

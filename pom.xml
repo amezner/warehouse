@@ -3,6 +3,7 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
+	<groupId>hu.unideb.inf</groupId>
 	<artifactId>warehouse</artifactId>
 	<packaging>jar</packaging>
 	<version>1.0</version>
@@ -38,7 +39,6 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.build.outputEncoding>UTF-8</project.build.outputEncoding>
 		<mainClass>hu.unideb.inf.warehouse.Main</mainClass>
-		<github.global.server>myrepo</github.global.server>
 	</properties>
 
 	<distributionManagement>
@@ -173,5 +173,4 @@
 		</plugins>
 	</reporting>
 
-	<groupId>hu.unideb.inf</groupId>
 </project>

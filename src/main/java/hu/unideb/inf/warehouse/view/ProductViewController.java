@@ -28,7 +28,10 @@ import javafx.stage.Stage;
  */
 public class ProductViewController {
 
-    private static Logger logger = LoggerFactory.getLogger(ProductViewController.class);
+    /**
+     * A naplózáshoz használt példány.
+     */
+	private static Logger logger = LoggerFactory.getLogger(ProductViewController.class);
     
 	private Main main;
 	
@@ -62,6 +65,9 @@ public class ProductViewController {
 	@FXML
     private Label productDescriptionLabel;
 	
+    /**
+     * JavaFX elemek inicializálását végző metódus.
+     */
 	@FXML
 	void initialize(){
 		productIDLabel.setText("");
@@ -90,6 +96,9 @@ public class ProductViewController {
         productTable.setItems(main.getProducts());
     }
     
+    /**
+     * Új termék nézet betöltését illetve termék felvételét a raktárba elvégző metódus.
+     */
 	@FXML
 	void addNewProductAction() {
 
@@ -132,6 +141,9 @@ public class ProductViewController {
 		
 	}
 	
+	/**
+	 * Régi termék szerkesztését kezelő metódus. Betölti a szükséges ablakot a termék adataival. 
+	 */
 	@FXML
 	void editProductAction() {
 	
@@ -159,6 +171,9 @@ public class ProductViewController {
 		
 	}
 	
+	/**
+	 * Meglévő termék törlésére szolgáló metódus. 
+	 */
 	@FXML
 	void deleteProductAction() {
 		

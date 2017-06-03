@@ -15,11 +15,35 @@ import javafx.beans.property.StringProperty;
  */
 public class SoldProduct {
 
+	
+	/**
+	 * Az eladott termék egyedi azonosítója. 
+	 */
 	private StringProperty soldProductID;
+	
+	/**
+	 * Az eladott termék neve. 
+	 */
     private StringProperty soldProductName;
+    
+	/**
+	 * Az eladott termék típusa. 
+	 */
     private StringProperty soldProductType;
+    
+	/**
+	 * Az eladott termék ára. Már az ügyfél kedvezményével csökkentett árat tárolja. 
+	 */
     private SimpleDoubleProperty soldProductSoldPrice;
+
+	/**
+	 * Az eladott termék mennyisége. 
+	 */
     private SimpleIntegerProperty soldProductSoldQuantity;
+    
+	/**
+	 * Az eladott termék részösszege. Automatikusan kalkulált érték az eladási árból és a mennyiségből. 
+	 */
     private SimpleDoubleProperty soldProductSubTotal;
 	
 	/**

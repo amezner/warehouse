@@ -31,7 +31,6 @@ public class LoaderTest {
 
 	/**
 	 * Loader osztály metódusainak a tesztelése előtt beállítjuk a teszt file-okat.
-	 * 
 	 */
 	@Before
 	public void setUp() {

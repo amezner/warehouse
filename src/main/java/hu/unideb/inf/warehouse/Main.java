@@ -33,11 +33,34 @@ public class Main extends Application {
      */
     private static Logger logger = LoggerFactory.getLogger(Main.class);
     
-	private ObservableList<Customer> customers = FXCollections.observableArrayList();
-	private ObservableList<Product> products = FXCollections.observableArrayList();
+    /**
+     * A betöltött ügyfeleket tartalmazó lista.
+     */
+    private ObservableList<Customer> customers = FXCollections.observableArrayList();
+	
+    /**
+     * A betöltött termékeket tartalmazó lista.
+     */
+    private ObservableList<Product> products = FXCollections.observableArrayList();
+    
+    /**
+     * A számlázáshoz használt kvázi bevásárlókocsiként funkcionáló lista.
+     */
     private ObservableList<SoldProduct> cart = FXCollections.observableArrayList();
+    
+    /**
+     * Számlázásnál az ügyfél-kiválasztást segítő változó.
+     */
     private boolean cartCustomerSelected = false;
+    
+    /**
+     * A számlázáshoz kiválasztott ügyfél.
+     */
     private Customer cartCustomer = null;
+    
+    /**
+     * A program által kiállított számlákat tartalmazó lista.
+     */
     private ObservableList<Invoice> invoices = FXCollections.observableArrayList();
     
     /**

@@ -22,7 +22,6 @@ public class ChooseCustomerController {
 
 	private Main main;
 
-
 	/**
 	 * JavaFX inicializációhoz szükséges metódus, nélküle nem működne a megjelenítés.
 	 * 
@@ -84,7 +83,12 @@ public class ChooseCustomerController {
         			 .addListener((o, oldValue, newValue) -> showCustomerDetails(newValue));
 	}
 	
-    void showCustomerDetails(Customer customer) {
+    
+	/**
+	 * A paraméterben kapott ügyfél adataival frissíti a címkék tartalmát.
+	 * @param customer ügyfél
+	 */
+	void showCustomerDetails(Customer customer) {
         if (customer != null) {
         	customerCountryLabel.setText(customer.getCustomerCountry());
         	customerPostCodeLabel.setText(customer.getCustomerPostCode());
@@ -95,7 +99,11 @@ public class ChooseCustomerController {
         }
     }
     
-	@FXML
+	
+    /**
+     * A kiválasztó gomb eseményeit kezelő metódus.
+     */
+    @FXML
 	void handleButtonAction() {
 		if (customerTable.getSelectionModel().getSelectedIndex() >= 0) {
 			main.setCartCustomer(customerTable.getItems().get(customerTable.getSelectionModel().getSelectedIndex()));

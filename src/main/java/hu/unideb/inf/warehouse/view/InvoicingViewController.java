@@ -135,6 +135,9 @@ public class InvoicingViewController {
 	}
 
 	
+	/**
+	 * Ügyfélválasztó ablak betöltését végző metódus. 
+	 */
 	void showChooseCustomer() {
         
 		logger.info("Ügyfélválasztó betöltése számlázáshoz.");
@@ -164,6 +167,9 @@ public class InvoicingViewController {
 		}        
     }
 	
+	/**
+	 * Ügyfélválasztó gomb eseményét kezelő metódus.
+	 */
 	@FXML
 	void pickCustomer() {
 	
@@ -186,6 +192,10 @@ public class InvoicingViewController {
 		
 	}
 	
+
+	/**
+	 * Termék kosárba történő felvételére szolgál.
+	 */
 	@FXML
 	void addToInvoice() {
 	
@@ -256,6 +266,9 @@ public class InvoicingViewController {
 		}
 	}
 
+	/**
+	 * Számla lezárására szolgál, a bevásárlókocsiban levő termékekből és a kiválasztott ügyfélből elkészíti a számlát. 
+	 */
 	@FXML
 	void finalizeInvoice() {
 		

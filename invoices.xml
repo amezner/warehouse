@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <invoices>
 	<invoice invoiceNumber="INV00001">
-		<invoiceDate>2017-05-29</invoiceDate>
+		<invoiceDate>2013-02-19</invoiceDate>
 		<invoiceDiscount>0</invoiceDiscount>
 		<customer customerID="CUS1004">
 			<customerName>Duis Dignissim Foundation</customerName>
@@ -11,7 +11,7 @@
 			<customerCountry>Philippines</customerCountry>
 			<customerEmail>et.magnis.dis@Utsagittis.com</customerEmail>
 			<customerPhone>+50 724 362 1498</customerPhone>
-			<customerLoyalty>Ezüs</customerLoyalty>
+			<customerLoyalty>Ezüst</customerLoyalty>
 			<customerDiscount>13</customerDiscount>
 		</customer>
 		<soldProduct soldProductID="PR00005">
@@ -34,7 +34,7 @@
 		</soldProduct>
 	</invoice>
 	<invoice invoiceNumber="INV00002">
-		<invoiceDate>2017-05-29</invoiceDate>
+		<invoiceDate>2016-01-02</invoiceDate>
 		<invoiceDiscount>0</invoiceDiscount>
 		<customer customerID="CUS1007">
 			<customerName>Eu Accumsan Sed Limited</customerName>
@@ -61,7 +61,7 @@
 		</soldProduct>
 	</invoice>
 	<invoice invoiceNumber="INV00003">
-		<invoiceDate>2017-05-29</invoiceDate>
+		<invoiceDate>2016-05-20</invoiceDate>
 		<invoiceDiscount>1</invoiceDiscount>
 		<customer customerID="CUS1003">
 			<customerName>Velit Cras Industries</customerName>
@@ -82,7 +82,7 @@
 		</soldProduct>
 	</invoice>
 	<invoice invoiceNumber="INV00005">
-		<invoiceDate>2017-05-29</invoiceDate>
+		<invoiceDate>2017-05-26</invoiceDate>
 		<invoiceDiscount>2</invoiceDiscount>
 		<customer customerID="CUS1097">
 			<customerName>Ac Turpis Inc.</customerName>

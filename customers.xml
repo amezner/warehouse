@@ -1,1 +1,136 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?><customers><customer><customerID>CUS1000</customerID><customerName>At Fringilla Purus Inc.</customerName><customerAddress>398-8242 Metus. Av.</customerAddress><customerCity>Blankenfelde-Mahlow</customerCity><customerPostCode>23820</customerPostCode><customerCountry>Cameroon</customerCountry><customerEmail>pede.Cum.sociis@massa.edu</customerEmail><customerPhone>+96 103 511 6378</customerPhone><customerLoyalty>Bronz</customerLoyalty><customerDiscount>6</customerDiscount></customer><customer><customerID>CUS1001</customerID><customerName>Integer Eu Incorporated</customerName><customerAddress>6545 Consectetuer Rd.</customerAddress><customerCity>Nashik</customerCity><customerPostCode>72521</customerPostCode><customerCountry>Palau</customerCountry><customerEmail>adipiscing.fringilla@nonlorem.edu</customerEmail><customerPhone>+83 355 205 9418</customerPhone><customerLoyalty>Alap</customerLoyalty><customerDiscount>20</customerDiscount></customer><customer><customerID>CUS1002</customerID><customerName>Pede Blandit Incorporated</customerName><customerAddress>9496 Non Street</customerAddress><customerCity>Ville de Maniwaki</customerCity><customerPostCode>88350</customerPostCode><customerCountry>Albania</customerCountry><customerEmail>Donec.porttitor.tellus@cubiliaCuraeDonec.edu</customerEmail><customerPhone>+83 226 278 7925</customerPhone><customerLoyalty>Arany</customerLoyalty><customerDiscount>21</customerDiscount></customer><customer><customerID>CUS1003</customerID><customerName>Velit Cras Industries</customerName><customerAddress>666-3355 Magna Avenue</customerAddress><customerCity>Jamnagar</customerCity><customerPostCode>61120</customerPostCode><customerCountry>Ukraine</customerCountry><customerEmail>tempus.non@tinciduntvehicularisus.com</customerEmail><customerPhone>+65 680 810 1632</customerPhone><customerLoyalty>Arany</customerLoyalty><customerDiscount>10</customerDiscount></customer><customer><customerID>CUS1004</customerID><customerName>Duis Dignissim Foundation</customerName><customerAddress>P.O. Box 598, 3615 Mattis. St.</customerAddress><customerCity>Borgomasino</customerCity><customerPostCode>53511</customerPostCode><customerCountry>Philippines</customerCountry><customerEmail>et.magnis.dis@Utsagittis.com</customerEmail><customerPhone>+50 724 362 1498</customerPhone><customerLoyalty>Ezüs</customerLoyalty><customerDiscount>13</customerDiscount></customer><customer><customerID>CUS1005</customerID><customerName>Auctor Inc.</customerName><customerAddress>P.O. Box 963, 6499 Amet Ave</customerAddress><customerCity>Mobile</customerCity><customerPostCode>70839</customerPostCode><customerCountry>Czech Republic</customerCountry><customerEmail>aptent.taciti@nequeInornare.org</customerEmail><customerPhone>+49 553 999 3904</customerPhone><customerLoyalty>Arany</customerLoyalty><customerDiscount>1</customerDiscount></customer><customer><customerID>CUS1006</customerID><customerName>Habitant LLP</customerName><customerAddress>9534 Sit St.</customerAddress><customerCity>Kruibeke</customerCity><customerPostCode>37596</customerPostCode><customerCountry>Vanuatu</customerCountry><customerEmail>Suspendisse@iaculis.org</customerEmail><customerPhone>+17 383 408 3346</customerPhone><customerLoyalty>Alap</customerLoyalty><customerDiscount>19</customerDiscount></customer><customer><customerID>CUS1007</customerID><customerName>Eu Accumsan Sed Limited</customerName><customerAddress>126-8599 Dui. St.</customerAddress><customerCity>Zielona Góra</customerCity><customerPostCode>78480</customerPostCode><customerCountry>Moldova</customerCountry><customerEmail>sollicitudin@Donecdignissimmagna.edu</customerEmail><customerPhone>+35 147 582 8862</customerPhone><customerLoyalty>Bronz</customerLoyalty><customerDiscount>6</customerDiscount></customer><customer><customerID>CUS1008</customerID><customerName>Egestas Aliquam Corporation</customerName><customerAddress>563-1129 Pharetra Rd.</customerAddress><customerCity>Bovesse</customerCity><customerPostCode>31354</customerPostCode><customerCountry>Dominica</customerCountry><customerEmail>ultrices@semegestasblandit.com</customerEmail><customerPhone>+72 457 570 2548</customerPhone><customerLoyalty>Bronz</customerLoyalty><customerDiscount>23</customerDiscount></customer><customer><customerID>CUS1009</customerID><customerName>Ac Mattis Incorporated</customerName><customerAddress>6501 Nullam St.</customerAddress><customerCity>Águas Lindas de Goiás</customerCity><customerPostCode>91289</customerPostCode><customerCountry>Sierra Leone</customerCountry><customerEmail>odio@nuncsitamet.ca</customerEmail><customerPhone>+37 544 534 4185</customerPhone><customerLoyalty>Bronz</customerLoyalty><customerDiscount>10</customerDiscount></customer><customer><customerID>CUS1010</customerID><customerName>Nullam LLP</customerName><customerAddress>7900 Nulla Av.</customerAddress><customerCity>Llanwrtwd Wells</customerCity><customerPostCode>64979</customerPostCode><customerCountry>Falkland Islands</customerCountry><customerEmail>lorem.auctor@incursus.ca</customerEmail><customerPhone>+28 821 410 5855</customerPhone><customerLoyalty>Bronz</customerLoyalty><customerDiscount>19</customerDiscount></customer></customers>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<customers>
+	<customer>
+		<customerID>CUS1000</customerID>
+		<customerName>At Fringilla Purus Inc.</customerName>
+		<customerAddress>398-8242 Metus. Av.</customerAddress>
+		<customerCity>Blankenfelde-Mahlow</customerCity>
+		<customerPostCode>23820</customerPostCode>
+		<customerCountry>Cameroon</customerCountry>
+		<customerEmail>pede.Cum.sociis@massa.edu</customerEmail>
+		<customerPhone>+96 103 511 6378</customerPhone>
+		<customerLoyalty>Bronz</customerLoyalty>
+		<customerDiscount>6</customerDiscount>
+	</customer>
+	<customer>
+		<customerID>CUS1001</customerID>
+		<customerName>Integer Eu Incorporated</customerName>
+		<customerAddress>6545 Consectetuer Rd.</customerAddress>
+		<customerCity>Nashik</customerCity>
+		<customerPostCode>72521</customerPostCode>
+		<customerCountry>Palau</customerCountry>
+		<customerEmail>adipiscing.fringilla@nonlorem.edu</customerEmail>
+		<customerPhone>+83 355 205 9418</customerPhone>
+		<customerLoyalty>Alap</customerLoyalty>
+		<customerDiscount>20</customerDiscount>
+	</customer>
+	<customer>
+		<customerID>CUS1002</customerID>
+		<customerName>Pede Blandit Incorporated</customerName>
+		<customerAddress>9496 Non Street</customerAddress>
+		<customerCity>Ville de Maniwaki</customerCity>
+		<customerPostCode>88350</customerPostCode>
+		<customerCountry>Albania</customerCountry>
+		<customerEmail>Donec.porttitor.tellus@cubiliaCuraeDonec.edu
+		</customerEmail>
+		<customerPhone>+83 226 278 7925</customerPhone>
+		<customerLoyalty>Arany</customerLoyalty>
+		<customerDiscount>21</customerDiscount>
+	</customer>
+	<customer>
+		<customerID>CUS1003</customerID>
+		<customerName>Velit Cras Industries</customerName>
+		<customerAddress>666-3355 Magna Avenue</customerAddress>
+		<customerCity>Jamnagar</customerCity>
+		<customerPostCode>61120</customerPostCode>
+		<customerCountry>Ukraine</customerCountry>
+		<customerEmail>tempus.non@tinciduntvehicularisus.com</customerEmail>
+		<customerPhone>+65 680 810 1632</customerPhone>
+		<customerLoyalty>Arany</customerLoyalty>
+		<customerDiscount>10</customerDiscount>
+	</customer>
+	<customer>
+		<customerID>CUS1004</customerID>
+		<customerName>Duis Dignissim Foundation</customerName>
+		<customerAddress>P.O. Box 598, 3615 Mattis. St.</customerAddress>
+		<customerCity>Borgomasino</customerCity>
+		<customerPostCode>53511</customerPostCode>
+		<customerCountry>Philippines</customerCountry>
+		<customerEmail>et.magnis.dis@Utsagittis.com</customerEmail>
+		<customerPhone>+50 724 362 1498</customerPhone>
+		<customerLoyalty>Ezüst</customerLoyalty>
+		<customerDiscount>13</customerDiscount>
+	</customer>
+	<customer>
+		<customerID>CUS1005</customerID>
+		<customerName>Auctor Inc.</customerName>
+		<customerAddress>P.O. Box 963, 6499 Amet Ave</customerAddress>
+		<customerCity>Mobile</customerCity>
+		<customerPostCode>70839</customerPostCode>
+		<customerCountry>Czech Republic</customerCountry>
+		<customerEmail>aptent.taciti@nequeInornare.org</customerEmail>
+		<customerPhone>+49 553 999 3904</customerPhone>
+		<customerLoyalty>Arany</customerLoyalty>
+		<customerDiscount>1</customerDiscount>
+	</customer>
+	<customer>
+		<customerID>CUS1006</customerID>
+		<customerName>Habitant LLP</customerName>
+		<customerAddress>9534 Sit St.</customerAddress>
+		<customerCity>Kruibeke</customerCity>
+		<customerPostCode>37596</customerPostCode>
+		<customerCountry>Vanuatu</customerCountry>
+		<customerEmail>Suspendisse@iaculis.org</customerEmail>
+		<customerPhone>+17 383 408 3346</customerPhone>
+		<customerLoyalty>Alap</customerLoyalty>
+		<customerDiscount>19</customerDiscount>
+	</customer>
+	<customer>
+		<customerID>CUS1007</customerID>
+		<customerName>Eu Accumsan Sed Limited</customerName>
+		<customerAddress>126-8599 Dui. St.</customerAddress>
+		<customerCity>Zielona Góra</customerCity>
+		<customerPostCode>78480</customerPostCode>
+		<customerCountry>Moldova</customerCountry>
+		<customerEmail>sollicitudin@Donecdignissimmagna.edu</customerEmail>
+		<customerPhone>+35 147 582 8862</customerPhone>
+		<customerLoyalty>Bronz</customerLoyalty>
+		<customerDiscount>6</customerDiscount>
+	</customer>
+	<customer>
+		<customerID>CUS1008</customerID>
+		<customerName>Egestas Aliquam Corporation</customerName>
+		<customerAddress>563-1129 Pharetra Rd.</customerAddress>
+		<customerCity>Bovesse</customerCity>
+		<customerPostCode>31354</customerPostCode>
+		<customerCountry>Dominica</customerCountry>
+		<customerEmail>ultrices@semegestasblandit.com</customerEmail>
+		<customerPhone>+72 457 570 2548</customerPhone>
+		<customerLoyalty>Bronz</customerLoyalty>
+		<customerDiscount>23</customerDiscount>
+	</customer>
+	<customer>
+		<customerID>CUS1009</customerID>
+		<customerName>Ac Mattis Incorporated</customerName>
+		<customerAddress>6501 Nullam St.</customerAddress>
+		<customerCity>Águas Lindas de Goiás</customerCity>
+		<customerPostCode>91289</customerPostCode>
+		<customerCountry>Sierra Leone</customerCountry>
+		<customerEmail>odio@nuncsitamet.ca</customerEmail>
+		<customerPhone>+37 544 534 4185</customerPhone>
+		<customerLoyalty>Bronz</customerLoyalty>
+		<customerDiscount>10</customerDiscount>
+	</customer>
+	<customer>
+		<customerID>CUS1010</customerID>
+		<customerName>Nullam LLP</customerName>
+		<customerAddress>7900 Nulla Av.</customerAddress>
+		<customerCity>Llanwrtwd Wells</customerCity>
+		<customerPostCode>64979</customerPostCode>
+		<customerCountry>Falkland Islands</customerCountry>
+		<customerEmail>lorem.auctor@incursus.ca</customerEmail>
+		<customerPhone>+28 821 410 5855</customerPhone>
+		<customerLoyalty>Bronz</customerLoyalty>
+		<customerDiscount>19</customerDiscount>
+	</customer>
+</customers>

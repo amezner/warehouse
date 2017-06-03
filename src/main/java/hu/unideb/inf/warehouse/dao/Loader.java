@@ -30,7 +30,10 @@ import javafx.collections.ObservableList;
  */
 public class Loader {
 
-    private static Logger logger = LoggerFactory.getLogger(Loader.class);
+    /**
+     * A naplózáshoz használt példány.
+     */
+	private static Logger logger = LoggerFactory.getLogger(Loader.class);
     
     /**
      * A termékek XML-ből történő beolvasását megvalósító metódus.

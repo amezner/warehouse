@@ -54,6 +54,9 @@ public class InvoicesViewController {
 
 	}
 
+	/**
+	 * Számla megtekintése gomb eseményét kezelő metódus. 
+	 */
 	@FXML
 	void viewInvoice() {
 		

@@ -16,12 +16,39 @@ import javafx.beans.property.StringProperty;
  */
 public class Product {
 
-    private StringProperty productID;
-    private StringProperty productName;
+	/**
+	 * A termék egyedi azonosítója. 
+	 */
+	private StringProperty productID;
+    
+	/**
+	 * A termék neve. 
+	 */
+	private StringProperty productName;
+	
+	/**
+	 * A termék típusa. 
+	 */
     private StringProperty productType;
+    
+	/**
+	 * A termék beszerzési ára. 
+	 */
     private IntegerProperty productPurchasePrice;
+    
+	/**
+	 * A termék eladási ára. 
+	 */
     private IntegerProperty productSellingPrice;
+    
+	/**
+	 * A termékből éppen raktáron lévő mennyiség. 
+	 */
     private IntegerProperty productOnStock;
+    
+	/**
+	 * A termék egyedi azonosítója. 
+	 */
     private StringProperty productDescription;
 	
 	/**

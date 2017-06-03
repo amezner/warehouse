@@ -90,6 +90,9 @@ public class CustomerViewController {
     }
 
    
+	/**
+	 * Új ügyfél hozzáadását kezelő metódus. Betölti a szükséges ablakot és bekéri az ügyfél adatait. 
+	 */
 	@FXML
 	void addNewCustomerAction() {
 		
@@ -134,6 +137,9 @@ public class CustomerViewController {
         
 	}
 
+	/**
+	 * Régi ügyfél szerkesztését kezelő metódus. Betölti a szükséges ablakot az ügyfél adataival. 
+	 */
 	@FXML
 	void editCustomerAction() {
         
@@ -159,7 +165,10 @@ public class CustomerViewController {
 		}
         
 	}
-	
+
+	/**
+	 * Meglévő ügyfél törlésére szolgáló metódus. 
+	 */
 	@FXML
 	void deleteCustomerAction() {
 		

@@ -13,15 +13,54 @@ import javafx.beans.property.StringProperty;
  */
 public class Customer {
 
-    private StringProperty customerID;
-    private StringProperty customerName;
-    private StringProperty customerAddress;
-    private StringProperty customerCity;
-    private StringProperty customerPostCode;
-    private StringProperty customerCountry;
-    private StringProperty customerEmail;
-    private StringProperty customerPhone;
-    private StringProperty customerLoyalty;
+	/**
+	 * Az ügyfél egyedi azonosítója. 
+	 */
+	private StringProperty customerID;
+
+	/**
+	 * Az ügyfél neve. 
+	 */
+	private StringProperty customerName;
+
+	/**
+	 * Az ügyfél teljes címének cím mezője. 
+	 */
+	private StringProperty customerAddress;
+
+	/**
+	 * Az ügyfél teljes címének város mezője. 
+	 */
+	private StringProperty customerCity;
+
+	/**
+	 * Az ügyfél teljes címének irányítószám mezője. 
+	 */
+	private StringProperty customerPostCode;
+    
+	/**
+	 * Az ügyfél teljes címének ország mezője. 
+	 */
+	private StringProperty customerCountry;
+    
+	/**
+	 * Az ügyfél email címe. 
+	 */
+	private StringProperty customerEmail;
+
+	/**
+	 * Az ügyfél telefonszáma. 
+	 */
+	private StringProperty customerPhone;
+	
+	/**
+	 * Az ügyfél törzsvásárlói kártyájának típusa. 
+	 */
+	private StringProperty customerLoyalty;
+	
+	/**
+	 * Az ügyfélhez tartotzó kedvezmény mértéke. 
+	 */
     private IntegerProperty customerDiscount;
 	
 	/**

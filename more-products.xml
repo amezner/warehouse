@@ -1,78 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <products>
-	<product productID="PR00001">
-		<productName>Lenovo Ideapad - Android</productName>
-		<productType>Tablet</productType>
-		<productPurchasePrice>11200</productPurchasePrice>
-		<productSellingPrice>150000</productSellingPrice>
-		<productOnStock>100</productOnStock>
-		<productDescription>Intel® Atom™ x5 processor, Android 6.0.1 Marshmallow</productDescription>
-	</product>
-	<product productID="PR00002">
-		<productName>HP EliteBook 820</productName>
-		<productType>Laptop</productType>
-		<productPurchasePrice>190000</productPurchasePrice>
-		<productSellingPrice>240000</productSellingPrice>
-		<productOnStock>100</productOnStock>
-		<productDescription>Core i5, 8GB RAM, 256GB SSD</productDescription>
-	</product>
-	<product productID="PR00003">
-		<productName>MacBook Pro 15 inch</productName>
-		<productType>Laptop</productType>
-		<productPurchasePrice>500000</productPurchasePrice>
-		<productSellingPrice>600000</productSellingPrice>
-		<productOnStock>40</productOnStock>
-		<productDescription>Core i5, 8GB RAM, 256GB SSD</productDescription>
-	</product>
-	<product productID="PR00004">
-		<productName>MacBook Pro 13</productName>
-		<productType>Laptop</productType>
-		<productPurchasePrice>480000</productPurchasePrice>
-		<productSellingPrice>640000</productSellingPrice>
-		<productOnStock>20</productOnStock>
-		<productDescription>Core i5, 16GB RAM, 512GB SSD</productDescription>
-	</product>
-	<product productID="PR00005">
-		<productName>HP ProBook 250 G4</productName>
-		<productType>Laptop</productType>
-		<productPurchasePrice>170000</productPurchasePrice>
-		<productSellingPrice>200000</productSellingPrice>
-		<productOnStock>300</productOnStock>
-		<productDescription>Core i3, 4GB RAM, 128GB SSD</productDescription>
-	</product>
-	<product productID="PR00006">
-		<productName>HP ProBook 820</productName>
-		<productType>Laptop</productType>
-		<productPurchasePrice>120000</productPurchasePrice>
-		<productSellingPrice>140000</productSellingPrice>
-		<productOnStock>100</productOnStock>
-		<productDescription>Core i5, 4GB RAM, 500GB HDD</productDescription>
-	</product>
-	<product productID="PR00007">
-		<productName>Lenovo Ideapad - Windows</productName>
-		<productType>Tablet</productType>
-		<productPurchasePrice>130000</productPurchasePrice>
-		<productSellingPrice>170000</productSellingPrice>
-		<productOnStock>50</productOnStock>
-		<productDescription>Intel® Atom™ x5 processor, Windows 10 Home</productDescription>
-	</product>
-	<product productID="PR00009">
-		<productName>XIAOMI AMAZFIT GPS</productName>
-		<productType>Okosóra</productType>
-		<productPurchasePrice>35000</productPurchasePrice>
-		<productSellingPrice>55000</productSellingPrice>
-		<productOnStock>100</productOnStock>
-		<productDescription>Xiaomi Amazfit GPS fitness okosóra - Narancs (XMAMAZPSWO)</productDescription>
-	</product>
-	<product productID="PR00008">
-	<productName>FITBIT BLAZE FEKETE</productName>
-		<productType>Okosóra</productType>
-		<productPurchasePrice>40000</productPurchasePrice>
-		<productSellingPrice>60000</productSellingPrice>
-		<productOnStock>30</productOnStock>
-		<productDescription>VEZETÉK NÉLKÜLI ALVÁS- ÉS AKTIVITÁSMÉRŐ, LARGE (FB502SBKL-EU)</productDescription>
-	</product>
-		<product productID="PR00010">
+	<product productID="PR00010">
 		<productName>SEAGATE BARRACUDA 1TB</productName>
 		<productType>Merevlemez</productType>
 		<productPurchasePrice>11000</productPurchasePrice>
@@ -80,12 +8,68 @@
 		<productOnStock>100</productOnStock>
 		<productDescription>1TB 3,5" 7200RPM, 64 MB SATA3 (ST1000DM003)</productDescription>
 	</product>
-	<product productID="PR00011">
-		<productName>WD BLUE 1TB</productName>
+	<product productID="PR00100">
+		<productName>WD BLUE 3TB</productName>
 		<productType>Merevlemez</productType>
-		<productPurchasePrice>10000</productPurchasePrice>
-		<productSellingPrice>15000</productSellingPrice>
-		<productOnStock>300</productOnStock>
-		<productDescription>CAVIAR BLUE, SATA3, 3.5 COL, 1TB/64MB PUFFER - WD10EZEX</productDescription>
+		<productPurchasePrice>12000</productPurchasePrice>
+		<productSellingPrice>40000</productSellingPrice>
+		<productOnStock>1000</productOnStock>
+		<productDescription>CAVIAR BLUE, SATA3, 3.5 COL, 3TB/64MB PUFFER - WD30EZEX</productDescription>
+	</product>
+	<product productID="PR00101">
+		<productName>WD BLUE 4TB</productName>
+		<productType>Merevlemez</productType>
+		<productPurchasePrice>46000</productPurchasePrice>
+		<productSellingPrice>50000</productSellingPrice>
+		<productOnStock>1000</productOnStock>
+		<productDescription>CAVIAR BLUE, SATA3, 3.5 COL, 4TB/64MB PUFFER - WD40EZEX</productDescription>
+	</product>
+	<product productID="PR00102">
+		<productName>WD BLUE 5TB</productName>
+		<productType>Merevlemez</productType>
+		<productPurchasePrice>29000</productPurchasePrice>
+		<productSellingPrice>60000</productSellingPrice>
+		<productOnStock>1000</productOnStock>
+		<productDescription>CAVIAR BLUE, SATA3, 3.5 COL, 5TB/64MB PUFFER - WD50EZEX</productDescription>
+	</product>
+	<product productID="PR00501">
+		<productName>Olympus OM-D E-M5 Mark II - csak váz</productName>
+		<productType>Fényképezőgép</productType>
+		<productPurchasePrice>290000</productPurchasePrice>
+		<productSellingPrice>369000</productSellingPrice>
+		<productOnStock>10</productOnStock>
+		<productDescription>Olympus OM-D E-M5 Mark II fényképezőgép váz, fekete</productDescription>
+	</product>
+	<product productID="PR00502">
+		<productName>Olympus OM-D E-M5 Mark II - csak váz</productName>
+		<productType>Fényképezőgép</productType>
+		<productPurchasePrice>290000</productPurchasePrice>
+		<productSellingPrice>369000</productSellingPrice>
+		<productOnStock>20</productOnStock>
+		<productDescription>Olympus OM-D E-M5 Mark II fényképezőgép váz, ezüst</productDescription>
+	</product>
+	<product productID="PR00503">
+		<productName>Olympus OM-D E-M5 Mark II - 14-150-2</productName>
+		<productType>Fényképezőgép</productType>
+		<productPurchasePrice>390000</productPurchasePrice>
+		<productSellingPrice>499000</productSellingPrice>
+		<productOnStock>10</productOnStock>
+		<productDescription>Olympus OM-D E-M5 Mark II fényképezőgép kit (14-150-2 fekete objektívvel), ezüst</productDescription>
+	</product>	
+	<product productID="PR00504">
+		<productName>Olympus M.Zuiko 9-18 F4-5.6</productName>
+		<productType>Objektív</productType>
+		<productPurchasePrice>120000</productPurchasePrice>
+		<productSellingPrice>189000</productSellingPrice>
+		<productOnStock>5</productOnStock>
+		<productDescription>Olympus M.Zuiko 9-18/F4-5.6 objektív PEN-hez, fekete</productDescription>
+	</product>		
+	<product productID="PR00505">
+		<productName>Olympus M.Zuiko 45 F1.8</productName>
+		<productType>Objektív</productType>
+		<productPurchasePrice>55000</productPurchasePrice>
+		<productSellingPrice>95000</productSellingPrice>
+		<productOnStock>5</productOnStock>
+		<productDescription>Olympus M.Zuiko 45/F1.8 objektív PEN-hez, fekete</productDescription>
 	</product>
 </products>

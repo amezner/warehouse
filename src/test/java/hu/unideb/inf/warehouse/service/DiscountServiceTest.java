@@ -10,6 +10,13 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import org.junit.Assert;
 
+/**
+ * A Discount osztály metódusainak a tesztelésére szolgáló osztály. Összesen két metódust tesztel,
+ * metódusonként pedig két illetve négy tesztet hajt végre. 
+ * 
+ * @author amezner
+ *
+ */
 public class DiscountServiceTest {
 
 	private ObservableList<SoldProduct> cart;
@@ -24,6 +31,9 @@ public class DiscountServiceTest {
 	private SoldProduct soldProduct3;
 	private SoldProduct soldProduct4;
 	
+	/**
+	 * Discount osztály metódusainak a tesztelése előtt beállítjuk a teszt értékeket.
+	 */	
 	@Before
 	public void setUp() {
     	
@@ -40,12 +50,20 @@ public class DiscountServiceTest {
 		soldProduct4 = new SoldProduct ("TE00002", "TestProduct2", "TestTYPE", 100.0, 500);
 	}
 
+	/**
+	 * Két tesztet hajtunk végre.
+	 * Az első tesztben hibás míg a második tesztben rendben lévő adatokat tesztelünk.  
+	 */
 	@Test
 	public void testCustomerDiscount() {
 		Assert.assertFalse(DiscountService.customerDiscount(testCustomer1, testProduct1));
 		Assert.assertTrue(DiscountService.customerDiscount(testCustomer1, testProduct2));
 	}
 
+	/**
+	 * Négy tesztet hajtunk végre.
+	 * Gyakorlatilag leteszteljük az összes lehetséges visszatérési értéket.
+	 */
 	@Test
 	public void testVolumeDiscount() {
 		cart.add(soldProduct1);

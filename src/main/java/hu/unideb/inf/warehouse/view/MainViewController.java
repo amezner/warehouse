@@ -1,7 +1,5 @@
 package hu.unideb.inf.warehouse.view;
 
-import java.io.IOException;
-
 import hu.unideb.inf.warehouse.Main;
 import javafx.fxml.FXML;
 
@@ -24,8 +22,11 @@ public class MainViewController {
         this.main = main;
     }
     
+	/**
+	 * Betölti a főmenüt.
+	 */
 	@FXML
-	void goHome() throws IOException {
+	void goHome() {
 		main.showMainMenu();
 	}
 }
